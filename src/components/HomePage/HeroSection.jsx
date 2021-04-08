@@ -17,9 +17,15 @@ const useStyles = makeStyles(theme => ({
     }
   },
   heroSection: {
-    marginTop: '-2rem',
+    marginTop: '-2.5rem',
     position: 'relative',
-    height: '74rem'
+    height: '74rem',
+    [theme.breakpoints.down('md')]: {
+      height: '50rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      height: '44rem'
+    }
   },
   heroSectionTitle: {
     zIndex: 1, // unclear why this is needed
@@ -29,7 +35,18 @@ const useStyles = makeStyles(theme => ({
     top: '15%',
     color: theme.palette.primary.dark,
     fontFamily: ['Piazzolla', 'serif'].join(', '),
-    fontSize: '4.2rem'
+    fontSize: '4.2rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '3.8rem',
+      padding: '0 4rem'
+    },
+    [theme.breakpoints.down('sm')]: {
+      fontSize: '3.6rem',
+      padding: '0 4rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.2rem'
+    }
   },
   heroImage: {
     height: '100%'
@@ -58,6 +75,7 @@ const HeroSection = () => {
       </h1>
       <GatsbyImage
         image={image}
+        layout='fullWidth'
         alt={'Romana Law Lawyers'}
         className={classes.heroImage}
       />

@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
     '& > div': {
       width: '95%',
       height: '2px',
-      backgroundColor: 'white',
+      backgroundColor: theme.palette.secondary.main,
       transition: 'transform 0.2s'
     },
     '&:hover > div:first-of-type': {

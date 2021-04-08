@@ -27,6 +27,12 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       right: 0,
       left: 0
+    },
+    [theme.breakpoints.down('md')]: {
+      padding: '12rem 9rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '11rem 5rem'
     }
   },
   introTitle: {
@@ -38,11 +44,29 @@ const useStyles = makeStyles(theme => ({
   introGrid: {},
   firstGridItem: {
     paddingLeft: '4rem',
-    paddingRight: '5rem'
+    paddingRight: '5rem',
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 0
+    },
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '8rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center',
+      paddingRight: 0
+    }
   },
   secondGridItem: {
     paddingLeft: '7rem',
-    paddingRight: '7rem'
+    paddingRight: '7rem',
+    '@media (max-width: 1520px)': {
+      paddingLeft: '3rem',
+      paddingRight: 0
+    },
+    [theme.breakpoints.down('md')]: {
+      paddingLeft: 0,
+      paddingRight: 0
+    }
   },
   paragraph: {
     marginBottom: '2.5rem'

@@ -30,10 +30,10 @@ const theme = createMuiTheme({
     htmlFontSize: 10,
     fontFamily: ['Noto Sans JP', 'sans-serif'].join(', '),
     body1: {
-      fontSize: '1.5rem'
+      fontSize: '1.6rem'
     },
     body2: {
-      fontSize: '1.3rem',
+      fontSize: '1.4rem',
       lineHeight: '1.5'
     }
   },
@@ -98,7 +98,7 @@ const theme = createMuiTheme({
       fontWeight: 'normal'
     },
     title4: {
-      fontSize: '2rem',
+      fontSize: '2.2rem',
       color: primaryColor,
       textTransform: 'uppercase',
       wordSpacing: '0.5px'
@@ -109,8 +109,28 @@ const theme = createMuiTheme({
       textTransform: 'uppercase',
       fontWeight: 'normal'
     },
-    test: {
-      color: primaryColor
+    inSideDrawer: {
+      transform: 'translateY(0)',
+      opacity: 1,
+      pointerEvents: 'auto',
+      width: 'auto',
+      height: 'auto',
+      border: 'none',
+      backgroundColor: 'white',
+      boxShadow: 'inset 0 0 5px 2px rgba(0,0,0,.2)',
+      '& a': {
+        color: primaryColor,
+        fontSize: '1.1rem',
+        display: 'flex',
+        height: '4rem',
+        borderBottom: `1px solid #eee`,
+        alignItems: 'center',
+        justifyContent: 'space-between',
+        paddingLeft: '1rem',
+        paddingRight: '1rem',
+        fontWeight: 'normal',
+        paddingLeft: '3.6rem'
+      }
     }
   }
 })

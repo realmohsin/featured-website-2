@@ -6,7 +6,7 @@ import FeaturedOnSection from '../components/HomePage/FeaturedOnSection'
 import IntroSection from '../components/HomePage/IntroSection'
 import FocusSection from '../components/HomePage/FocusSection'
 import InstagramSection from '../components/HomePage/InstagramSection'
-import BlogMediaSection from '../components/HomePage/BlogMediaSection'
+import MediaSection from '../components/HomePage/MediaSection'
 import ContactForm from '../components/ContactForm'
 import Footer from '../components/Footer'
 
@@ -18,7 +18,7 @@ export default function Home () {
       <IntroSection />
       <FocusSection />
       <InstagramSection />
-      <BlogMediaSection />
+      <MediaSection />
       <ContactForm />
       <Footer />
     </Layout>

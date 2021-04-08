@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 import { StaticImage, getImage } from 'gatsby-plugin-image'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, Container, Typography } from '@material-ui/core'
+import { Grid, Container, Typography, Hidden } from '@material-ui/core'
 import Button from '../Button'
 
 const useStyles = makeStyles(theme => ({
@@ -38,7 +38,11 @@ const useStyles = makeStyles(theme => ({
   rowTitle: {
     ...theme.custom.title4,
     textAlign: 'center',
-    marginBottom: '4rem'
+    marginBottom: '4rem',
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2rem',
+      marginBottom: '1.5rem'
+    }
   },
   divider: {
     width: '100%',
@@ -46,10 +50,16 @@ const useStyles = makeStyles(theme => ({
     backgroundColor: theme.palette.secondary.main
   },
   rowParagraph: {
-    margin: '4rem 0 8rem'
+    margin: '4rem 0 8rem',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '2rem'
+    }
   },
   button: {
-    margin: '0 auto'
+    margin: '0 auto',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '6rem'
+    }
   },
   rowImgContainer: {
     padding: '2.3rem'
@@ -89,49 +99,84 @@ const FocusSection = props => {
       <Container>
         <h2 className={classes.focusTitle}>Our Focus</h2>
         <Grid container className={classes.row}>
-          <Grid item xs={12} sm={5} className={classes.rowContent}>
+          <Grid item xs={12} md={5} className={classes.rowContent}>
             <h3 className={classes.rowTitle}>Business Law</h3>
             <div className={classes.divider} />
             <Typography variant='body1' className={classes.rowParagraph}>
               From startups to larger corporations, we provide a range of legal
               services to help your business grow.
             </Typography>
-            <Button isLink text='Learn More' extraClassName={classes.button} />
+            <Hidden mdDown>
+              <Button
+                isLink
+                text='Learn More'
+                extraClassName={classes.button}
+              />
+            </Hidden>
           </Grid>
-          <Grid item xs={12} sm={7} className={classes.rowImgContainer}>
+          <Grid item xs={12} md={7} className={classes.rowImgContainer}>
             {/* <Img fluid={data.focus1.childImageSharp.fluid} alt='Business Law' /> */}
             <StaticImage
               src='../../assets/images/focus-1.jpg'
               alt='Business Law'
             />
           </Grid>
+          <Hidden mdUp>
+            <Button isLink text='Learn More' extraClassName={classes.button} />
+          </Hidden>
         </Grid>
 
         <Grid container className={classes.row}>
-          <Grid item xs={12} sm={7} className={classes.rowImgContainer}>
-            {/* <Img
-              fluid={data.focus2.childImageSharp.fluid}
-              alt='Entertainment Law'
-            /> */}
+          <Hidden mdUp>
+            <Grid item xs={12} md={5} className={classes.rowContent}>
+              <h3 className={classes.rowTitle}>Entertainment Law</h3>
+              <div className={classes.divider} />
+              <Typography variant='body1' className={classes.rowParagraph}>
+                We’re here to provide guidance to production companies,
+                producers, talent and other industry professionals as you build
+                your career.
+              </Typography>
+              <Hidden mdDown>
+                <Button
+                  isLink
+                  text='Learn More'
+                  extraClassName={classes.button}
+                />
+              </Hidden>
+            </Grid>
+          </Hidden>
+
+          <Grid item xs={12} md={7} className={classes.rowImgContainer}>
             <StaticImage
               src='../../assets/images/focus-2.jpg'
               alt='Entertainment Law'
             />
           </Grid>
 
-          <Grid item xs={12} sm={5} className={classes.rowContent}>
-            <h3 className={classes.rowTitle}>Entertainment Law</h3>
-            <div className={classes.divider} />
-            <Typography variant='body1' className={classes.rowParagraph}>
-              We’re here to provide guidance to production companies, producers,
-              talent and other industry professionals as you build your career.
-            </Typography>
+          <Hidden mdUp>
             <Button isLink text='Learn More' extraClassName={classes.button} />
-          </Grid>
+          </Hidden>
+
+          <Hidden mdDown>
+            <Grid item xs={12} md={5} className={classes.rowContent}>
+              <h3 className={classes.rowTitle}>Entertainment Law</h3>
+              <div className={classes.divider} />
+              <Typography variant='body1' className={classes.rowParagraph}>
+                We’re here to provide guidance to production companies,
+                producers, talent and other industry professionals as you build
+                your career.
+              </Typography>
+              <Button
+                isLink
+                text='Learn More'
+                extraClassName={classes.button}
+              />
+            </Grid>
+          </Hidden>
         </Grid>
 
         <Grid container className={classes.row}>
-          <Grid item xs={12} sm={5} className={classes.rowContent}>
+          <Grid item xs={12} md={5} className={classes.rowContent}>
             <h3 className={classes.rowTitle}>Business Disputes</h3>
             <div className={classes.divider} />
             <Typography variant='body1' className={classes.rowParagraph}>
@@ -142,7 +187,7 @@ const FocusSection = props => {
             </Typography>
             <Button isLink text='Learn More' extraClassName={classes.button} />
           </Grid>
-          <Grid item xs={12} sm={7} className={classes.rowImgContainer}>
+          <Grid item xs={12} md={7} className={classes.rowImgContainer}>
             <StaticImage
               src='../../assets/images/focus-3.jpg'
               alt='Business Disputes'

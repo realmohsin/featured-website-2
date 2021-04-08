@@ -123,11 +123,13 @@ const FeaturedOnSection = () => {
         <h2 className={classes.featuredOnTitle}>Featured On</h2>
         <div className={classes.featuredGrid}>
           {data.featured.nodes.map((node, i) => (
-            <GatsbyImage
-              image={getImage(node.childImageSharp)}
-              alt='Featured In'
-              className={classes.featuredCompanyImg}
-            />
+            <div className={classes.gridItem}>
+              <GatsbyImage
+                image={getImage(node.childImageSharp)}
+                alt='Featured In'
+                className={classes.featuredCompanyImg}
+              />
+            </div>
           ))}
         </div>
         <div className={clsx(classes.divider, classes.bottomDivider)} />

@@ -36,10 +36,21 @@ const useStyles = makeStyles(theme => ({
   },
   instagramGrid: {
     padding: '0 7rem',
-    marginBottom: '5rem'
+    marginBottom: '5rem',
+    [theme.breakpoints.down('sm')]: {
+      padding: '0 2rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '0'
+    }
   },
   gridItem: {
-    padding: '1.75rem'
+    padding: '1.75rem',
+    [theme.breakpoints.down('xs')]: {
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '1.75rem 0.8rem'
+    }
   },
   instagramImg: {},
   instagramButton: {

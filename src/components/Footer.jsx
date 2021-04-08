@@ -38,10 +38,19 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       right: 0,
       left: 0
+    },
+    [theme.breakpoints.down('xs')]: {
+      textAlign: 'center'
     }
   },
   leftSide: {
-    padding: '0 5rem'
+    padding: '0 5rem',
+    [theme.breakpoints.down('sm')]: {
+      marginBottom: '10rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: '3rem'
+    }
   },
   middleSide: {
     padding: '0 6rem'
@@ -50,7 +59,7 @@ const useStyles = makeStyles(theme => ({
     padding: '0 4rem'
   },
   addressTitle: {
-    marginBottom: '3rem'
+    marginBottom: '1rem'
   },
   address: {
     marginBottom: '3rem'
@@ -59,27 +68,42 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '6rem'
   },
   socialIconsTitle: {
-    marginBottom: '2rem'
+    marginBottom: '2rem',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: '7rem'
+    }
   },
   socialIconsContainer: {
     width: '24rem',
     display: 'flex',
     paddingRight: '5rem',
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0rem auto 5rem',
+      paddingRight: 0
+    }
   },
   contactMessage: {
     marginBottom: '3rem',
-    width: '24rem'
+    width: '24rem',
+    [theme.breakpoints.down('xs')]: {
+      width: 'auto'
+    }
   },
   telephoneLink: {
     width: '22rem',
     border: `2px solid ${theme.palette.common.goldVariant1}`,
     padding: '0.8rem 0rem',
     textAlign: 'center',
-    marginBottom: '5rem'
+    marginBottom: '5rem',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 auto 5rem'
+    }
   },
   helpLink: {
-    marginBottom: '3rem'
+    marginBottom: '3rem',
+    textDecoration: 'underline',
+    fontSize: '0.95em'
   },
   blurb: {
     marginBottom: '3rem',
@@ -103,15 +127,18 @@ const Footer = props => {
       <Container>
         <Grid container>
           <Grid item xs={12} sm={6} md={4} className={classes.leftSide}>
-            <Typography variant='body1' className={classes.addressTitle}>
-              Address
+            <Typography variant='body1' className={classes.contactMessage}>
+              Book an Appointment With one of our Lawyers:
             </Typography>
+            <a href='tel:123-456-7890' className={classes.telephoneLink}>
+              BOOK NOW
+            </a>
+            {/* <Typography variant='body1' className={classes.addressTitle}>
+              Address
+            </Typography> */}
             <Typography variant='body1' className={classes.address}>
               ROMANO LAW PLLC <br /> 55 BROAD STREET, 18TH FL. <br />
               NEW YORK, NY 10004
-            </Typography>
-            <Typography variant='body1' className={classes.joinOurTeam}>
-              JOIN OUR TEAM
             </Typography>
             <div>
               <Typography variant='body1' className={classes.socialIconsTitle}>
@@ -150,11 +177,11 @@ const Footer = props => {
             <Typography variant='body1' className={classes.helpLink}>
               How Can We Help?
             </Typography>
-            <Typography variant='body1' className={classes.reviewsLink}>
+            <Typography variant='body1' className={classes.helpLink}>
               Client Reviews
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} className={classes.rightSide}>
+          <Grid item xs={12} sm={12} md={4} className={classes.rightSide}>
             <Typography variant='body2' className={classes.blurb}>
               OUR BUSINESS LAWYERS WORK WITH CLIENTS THROUGHOUT THE WORLD. IN
               NEW YORK, WE REPRESENT PEOPLE AND BUSINESSES BASED IN MANHATTAN,

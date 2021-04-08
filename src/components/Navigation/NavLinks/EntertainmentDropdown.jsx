@@ -163,7 +163,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   inSideDrawer: {
-    ...theme.custom.dropdownInSideDrawer
+    ...theme.custom.inSideDrawer
   }
 }))
 

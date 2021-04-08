@@ -31,8 +31,10 @@ const useStyles = makeStyles(theme => ({
     border: `2px solid ${theme.palette.secondary.dark}`,
     borderRadius: '1rem',
     // backgroundColor: '#F9F9F9',
-    backgroundColor: theme.palette.primary.dark
-    // boxShadow: theme.shadows[6]
+    backgroundColor: theme.palette.primary.dark,
+    [theme.breakpoints.down('md')]: {
+      margin: '0 2rem'
+    }
   },
   navList: {
     display: 'flex'
@@ -69,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    padding: '1.1rem 0',
+    padding: '1rem 0',
     height: '100%',
     color: theme.palette.secondary.main,
     borderRight: `2px solid ${theme.palette.secondary.dark}`,
@@ -111,7 +113,7 @@ const Navbar = props => {
             <EntertainmentDropdown />
           </li>
           <li className={classes.navItem}>
-            <div className={classes.navLink}>Business Disputes</div>
+            <div className={classes.navLink}>Disputes</div>
             <DisputeDropdown />
           </li>
           <li className={classes.navItem}>

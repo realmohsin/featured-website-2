@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Hidden } from '@material-ui/core'
 import Navbar from './Navbar'
 import MobileCtaNavbar from './MobileCtaNavbar'
-// import SideDrawer from './SideDrawer/index.jsx'
+import SideDrawer from './SideDrawer/index.jsx'
 
 const Navigation = props => {
   const [showingSideDrawer, setShowingSideDrawer] = useState(false)
@@ -28,10 +28,10 @@ const Navigation = props => {
       </Hidden>
       <Hidden mdUp>
         <MobileCtaNavbar toggleSideDrawer={toggleSideDrawer} />
-        {/* <SideDrawer
+        <SideDrawer
           showing={showingSideDrawer}
           closeSideDrawer={closeSideDrawer}
-        /> */}
+        />
       </Hidden>
     </>
   )
