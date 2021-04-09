@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, TextField, Container } from '@material-ui/core'
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Container } from '@material-ui/core'
 import Input from './Input'
 import Button from './Button'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   contactSection: {
     padding: '12rem 0'
   },

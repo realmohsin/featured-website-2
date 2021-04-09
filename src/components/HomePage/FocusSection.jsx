@@ -1,24 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage, getImage } from 'gatsby-plugin-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Container, Typography, Hidden } from '@material-ui/core'
 import Button from '../Button'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   focusSection: {
     padding: '12rem 0'
   },

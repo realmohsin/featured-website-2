@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react'
-import { GatsbyImage, StaticImage, getImage } from 'gatsby-plugin-image'
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Grid, Typography, Container } from '@material-ui/core'
-import darkBg from '../assets/images/dark-bg.gif'
+
 import {
   FaFacebook,
   FaTwitter,
@@ -13,18 +12,6 @@ import {
 } from 'react-icons/fa'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   footer: {
     padding: '8rem 0 12rem',
     // background: `url(${darkBg})`,

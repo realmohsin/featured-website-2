@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  makeStyles,
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Button
-} from '@material-ui/core'
+import { makeStyles, Grid } from '@material-ui/core'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import clsx from 'clsx'
 
@@ -17,11 +10,8 @@ const useStyles = makeStyles(theme => ({
     border: `1px solid ${theme.palette.secondary.main}`,
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
-    // width: '31rem',
-    // height: '38rem', // 4.75rem each
     width: '23rem',
     height: '30rem', // 4.75rem each
-    // background: 'white',
     background: theme.palette.primary.dark,
     boxShadow: theme.shadows[5],
     '& > li': {

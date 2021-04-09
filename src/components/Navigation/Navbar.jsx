@@ -8,18 +8,6 @@ import EntertainmentDropdown from './NavLinks/EntertainmentDropdown'
 import DisputeDropdown from './NavLinks/DisputeDropdown'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   navContainer: {
     position: 'sticky',
     top: 58,

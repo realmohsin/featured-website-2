@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import { graphql, useStaticQuery } from 'gatsby'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 
@@ -83,34 +83,6 @@ const FeaturedOnSection = () => {
           }
         }
       }
-      # recognition1: file(name: { eq: "recognition-1" }) {
-      #   childImageSharp {
-      #     fixed(width: 142, height: 136) {
-      #       ...GatsbyImageSharpFixed
-      #     }
-      #   }
-      # }
-      # recognition2: file(name: { eq: "recognition-2" }) {
-      #   childImageSharp {
-      #     fixed(width: 156, height: 124) {
-      #       ...GatsbyImageSharpFixed
-      #     }
-      #   }
-      # }
-      # recognition3: file(name: { eq: "recognition-3" }) {
-      #   childImageSharp {
-      #     fluid(maxWidth: 220) {
-      #       ...GatsbyImageSharpFluid
-      #     }
-      #   }
-      # }
-      # recognition4: file(name: { eq: "recognition-4" }) {
-      #   childImageSharp {
-      #     fluid(maxWidth: 220) {
-      #       ...GatsbyImageSharpFluid
-      #     }
-      #   }
-      # }
     }
   `)
 

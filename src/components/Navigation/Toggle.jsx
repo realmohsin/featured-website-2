@@ -1,5 +1,5 @@
 import React from 'react'
-import { makeStyles, Box } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core'
 
 // dont need the hover effect since it wont be visible on desktop
 
