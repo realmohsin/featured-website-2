@@ -1,23 +1,10 @@
-import React, { useState, useEffect } from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
 import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Grid, Typography, Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   aboutSection: {
     padding: '2rem 0 12rem'
   },
@@ -78,9 +65,6 @@ const AboutSection = props => {
   const classes = useStyles()
 
   const atXsDown = useMediaQuery(theme.breakpoints.down('xs')) // below 600
-  const atMdUp = useMediaQuery(theme.breakpoints.up('md')) // 960 and above
-  const atSmOnly = useMediaQuery(theme.breakpoints.only('sm')) // only between 600 and 959
-  const betweenSmLg = useMediaQuery(theme.breakpoints.between('sm', 'lg')) // only between 600 and 1919
 
   const RightSideImg = () => (
     <StaticImage src='../../assets/images/about-2.jpg' alt='Business Law' />

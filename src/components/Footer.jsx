@@ -1,8 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { Grid, Typography, Container } from '@material-ui/core'
-
 import {
   FaFacebook,
   FaTwitter,
@@ -14,10 +13,8 @@ import {
 const useStyles = makeStyles(theme => ({
   footer: {
     padding: '8rem 0 12rem',
-    // background: `url(${darkBg})`,
     textTransform: 'uppercase',
     color: theme.palette.common.goldVariant1,
-    // background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%)`,
     position: 'relative',
     '& > .gatsby-image-wrapper-constrained': {
       position: 'absolute',
@@ -101,8 +98,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const Footer = props => {
-  const theme = useTheme()
+const Footer = () => {
   const classes = useStyles()
 
   return (

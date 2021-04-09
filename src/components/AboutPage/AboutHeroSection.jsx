@@ -4,39 +4,13 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   aboutHeroSection: {
     marginTop: '-2rem',
-    // position: 'relative',
     height: '42rem',
     overflow: 'hidden'
   },
-  // AboutHeroSectionTitle: {
-  //   zIndex: 1, // unclear why this is needed
-  //   width: '100%',
-  //   textAlign: 'center',
-  //   position: 'absolute',
-  //   top: '15%',
-  //   color: theme.palette.primary.dark,
-  //   fontFamily: ['Piazzolla', 'serif'].join(', '),
-  //   fontSize: '4.2rem'
-  // },
   heroImage: {
     transform: 'translateY(-10%)'
-    // height: '100%',
-    // objectFit: 'center',
-    // objectPosition: '25% 25%'
   }
 }))
 

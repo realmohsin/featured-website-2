@@ -1,27 +1,11 @@
-import React, { useState, useEffect } from 'react'
-import clsx from 'clsx'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, Typography, Container } from '@material-ui/core'
-import { FaFacebook, FaGoogle, FaStar } from 'react-icons/fa'
-import { FcGoogle } from 'react-icons/fc'
+import React, { useState } from 'react'
+import { makeStyles } from '@material-ui/core/styles'
+import { Grid, Container } from '@material-ui/core'
 import Review from './Review'
 import Button from '../Button'
 import reviews from '../../data/reviews'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   teamSection: {
     padding: '6rem 0 12rem'
   },
@@ -44,8 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const ReviewsSection = props => {
-  const theme = useTheme()
+const ReviewsSection = () => {
   const classes = useStyles()
 
   const [moreOpen, setMoreOpen] = useState(false)

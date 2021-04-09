@@ -1,23 +1,11 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 import { Container, Grid, Typography } from '@material-ui/core'
 import teamMembers from '../../data/team-members'
 
 const useStyles = makeStyles(theme => ({
-  example: {
-    // ...mobile first styles,
-    [theme.breakpoints.up('sm')]: {
-      //...sm and up styles
-    },
-    [theme.breakpoints.up('md')]: {
-      //...md and up styles
-    },
-    '@media (min-width: 1320px)': {
-      //...rules for above 1320px
-    }
-  },
   teamSection: {
     padding: '4rem 0 10rem'
   },
@@ -52,7 +40,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const TeamSection = props => {
-  const theme = useTheme()
   const classes = useStyles()
   const data = useStaticQuery(graphql`
     query {

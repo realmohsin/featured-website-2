@@ -1,13 +1,9 @@
 import React from 'react'
-import { StaticImage, GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { StaticImage } from 'gatsby-plugin-image'
 import { makeStyles, Box } from '@material-ui/core'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Collapse from '@material-ui/core/Collapse'
-
-import clsx from 'clsx'
-
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
-
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import BusinessDropdown from '../NavLinks/BusinessDropdown'
 import EntertainmentDropdown from '../NavLinks/EntertainmentDropdown'
@@ -105,10 +101,10 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
     setMenuState({ ...menuState, [menuName]: !menuState[menuName] })
   }
 
-  const handleSubMenuClick = (e, menuName, subMenuName) => {
-    e.stopPropagation()
-    handleMenuClick(menuName, subMenuName)
-  }
+  // const handleSubMenuClick = (e, menuName, subMenuName) => {
+  //   e.stopPropagation()
+  //   handleMenuClick(menuName, subMenuName)
+  // }
 
   const sideDrawerClasses = [classes.sideDrawer]
   if (showing) {
@@ -123,7 +119,6 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
       <div className={sideDrawerClasses.join(' ')}>
         <Box>
           <StaticImage src='../../../assets/images/logo.png' alt='Logo' />
-          {/* <img src={logo} alt='logo' className={classes.logo} /> */}
         </Box>
 
         <nav className={classes.sideDrawerNav}>
