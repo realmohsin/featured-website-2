@@ -1,9 +1,9 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { makeStyles, Box } from '@material-ui/core'
 import CSSTransition from 'react-transition-group/CSSTransition'
 import Collapse from '@material-ui/core/Collapse'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import BusinessDropdown from '../NavLinks/BusinessDropdown'
 import EntertainmentDropdown from '../NavLinks/EntertainmentDropdown'
@@ -124,22 +124,22 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
         <nav className={classes.sideDrawerNav}>
           <ul>
             <li>
-              <AniLink fade duration={1} to={`/`} className={classes.link}>
+              <Link to={`/`} className={classes.link}>
                 Home
-              </AniLink>
+              </Link>
             </li>
 
             <li>
-              <AniLink fade duration={1} to={`/about`} className={classes.link}>
+              <Link to={`/about`} className={classes.link}>
                 About
-              </AniLink>
+              </Link>
             </li>
 
             <li
               onClick={() => handleMenuClick('menu1')}
               className={classes.link}
             >
-              Business
+              Business Law
               {menuState.menu1 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu1} timeout='auto' unmountOnExit>
@@ -150,7 +150,7 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
               onClick={() => handleMenuClick('menu2')}
               className={classes.link}
             >
-              Entertainment
+              Entertainment Law
               {menuState.menu2 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu2} timeout='auto' unmountOnExit>
@@ -168,32 +168,22 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
               <DisputeDropdown inSideDrawer />
             </Collapse>
 
-            <li>
-              <AniLink fade duration={1} to={`/blog`} className={classes.link}>
+            {/* <li>
+              <Link to={`/blog`} className={classes.link}>
                 Blog
-              </AniLink>
-            </li>
+              </Link>
+            </li> */}
 
             <li>
-              <AniLink
-                fade
-                duration={1}
-                to={`/careers`}
-                className={classes.link}
-              >
+              <Link to={`/careers`} className={classes.link}>
                 Careers
-              </AniLink>
+              </Link>
             </li>
 
             <li>
-              <AniLink
-                fade
-                duration={1}
-                to={`/contact`}
-                className={classes.link}
-              >
+              <Link to={`/contact`} className={classes.link}>
                 Contact
-              </AniLink>
+              </Link>
             </li>
           </ul>
         </nav>

@@ -13,7 +13,6 @@ export default function AboutPage () {
       <AboutSection />
       <TeamSection />
       <ReviewsSection />
-      <Footer />
     </Layout>
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { makeStyles, Grid } from '@material-ui/core'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     transition: 'all 0.3s',
     width: '23rem',
     height: '30rem', // 4.75rem each
-    background: theme.palette.primary.dark,
+    background: '#CCAB62',
     boxShadow: theme.shadows[3],
     '& > li': {
       flex: '1',
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   nameLink: {
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.dark,
     flex: 1,
     display: 'flex',
     alignItems: 'center',
@@ -48,64 +48,37 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       direction='column'
     >
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/entertainment/trademark-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/entertainment/trademark-law`} className={classes.nameLink}>
           Trademark Law
-        </AniLink>
+        </Link>
       </Grid>
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/entertainment/art-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/entertainment/art-law`} className={classes.nameLink}>
           Art Law
-        </AniLink>
+        </Link>
       </Grid>
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/entertainment/fashion-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/entertainment/fashion-law`} className={classes.nameLink}>
           Fashion Law
-        </AniLink>
+        </Link>
       </Grid>
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/entertainment/film-financing`}
-          className={classes.nameLink}
-        >
+        <Link to={`/entertainment/film-financing`} className={classes.nameLink}>
           Film Financing
-        </AniLink>
+        </Link>
       </Grid>
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/entertainment/music-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/entertainment/music-law`} className={classes.nameLink}>
           Music Law
-        </AniLink>
+        </Link>
       </Grid>
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
+        <Link
           to={`/entertainment/sports-law-attorney`}
           className={classes.nameLink}
         >
           Sports Law
-        </AniLink>
+        </Link>
       </Grid>
     </Grid>
   )

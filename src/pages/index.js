@@ -8,19 +8,17 @@ import FocusSection from '../components/HomePage/FocusSection'
 import InstagramSection from '../components/HomePage/InstagramSection'
 import MediaSection from '../components/HomePage/MediaSection'
 import ContactForm from '../components/ContactForm'
-import Footer from '../components/Footer'
 
 export default function Home () {
   return (
     <Layout>
       <HeroSection />
-      <FeaturedOnSection />
       <IntroSection />
+      <FeaturedOnSection />
       <FocusSection />
       <InstagramSection />
       <MediaSection />
       <ContactForm />
-      <Footer />
     </Layout>
   )
 }

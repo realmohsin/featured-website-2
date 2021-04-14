@@ -9,6 +9,7 @@ import {
   FaLinkedin,
   FaInstagram
 } from 'react-icons/fa'
+import { Link } from 'gatsby'
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -80,6 +81,10 @@ const useStyles = makeStyles(theme => ({
     padding: '0.8rem 0rem',
     textAlign: 'center',
     marginBottom: '5rem',
+    transition: 'all 0.3s',
+    '&:hover': {
+      backgroundColor: theme.palette.primary.main
+    },
     [theme.breakpoints.down('xs')]: {
       margin: '0 auto 5rem'
     }
@@ -95,6 +100,10 @@ const useStyles = makeStyles(theme => ({
   },
   darkBg: {
     zIndex: -10
+  },
+  copyright: {
+    marginTop: '10rem',
+    fontSize: '1.5rem'
   }
 }))
 
@@ -104,7 +113,7 @@ const Footer = () => {
   return (
     <footer className={classes.footer}>
       <StaticImage
-        src='../assets/images/dark-bg.gif'
+        src='../assets/images/dark-bg.png'
         className={classes.darkBg}
       />
       <Container>
@@ -158,10 +167,10 @@ const Footer = () => {
               (123) 456-7890
             </a>
             <Typography variant='body1' className={classes.helpLink}>
-              How Can We Help?
+              <Link to='/contact'>How Can We Help?</Link>
             </Typography>
             <Typography variant='body1' className={classes.helpLink}>
-              Client Reviews
+              <Link to='/about#reviews-section'>Client Reviews</Link>
             </Typography>
           </Grid>
           <Grid item xs={12} sm={12} md={4} className={classes.rightSide}>
@@ -173,7 +182,7 @@ const Footer = () => {
               ENTERTAINMENT LAWYERS ALSO REPRESENT INDIVIDUALS AND ORGANIZATIONS
               LOCATED IN LOS ANGELES, TORONTO, LONDON, SYDNEY AND HONG KONG.
             </Typography>
-            <Typography variant='body1'>
+            <Typography variant='body1' className={classes.copyright}>
               ©2003–2020 ROMANO LAW PLLC. <br /> ALL RIGHTS RESERVED. NYC
             </Typography>
           </Grid>

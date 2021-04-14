@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     width: '100%',
     padding: '0.95rem',
     position: 'fixed',
-    boxShadow: theme.shadows[2],
+    boxShadow: theme.shadows[6],
     zIndex: 100
   },
   stickyCtaText: {

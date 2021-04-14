@@ -9,7 +9,6 @@ export default function Careers () {
     <Layout>
       <CareersIntro />
       <JobListings />
-      <Footer />
     </Layout>
   )
 }

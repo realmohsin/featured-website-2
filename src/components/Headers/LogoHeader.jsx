@@ -29,6 +29,7 @@ const LogoHeader = () => {
         src='../../assets/images/logo.png'
         alt='Romana Law Logo'
         className={classes.logo}
+        loading='eager'
       />
     </div>
   )

@@ -7,6 +7,7 @@ import StickyCTA from './Headers/StickyCTA'
 import LogoHeader from './Headers/LogoHeader'
 import Navigation from './Navigation'
 import { Hidden } from '@material-ui/core'
+import Footer from './Footer'
 
 const Layout = ({ title, description, children }) => {
   return (
@@ -20,6 +21,7 @@ const Layout = ({ title, description, children }) => {
         <LogoHeader />
         <Navigation />
         <main>{children}</main>
+        <Footer />
       </ThemeProvider>
     </>
   )

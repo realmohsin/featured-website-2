@@ -28,7 +28,7 @@ const theme = createMuiTheme({
   },
   typography: {
     htmlFontSize: 10,
-    fontFamily: ['Noto Sans JP', 'sans-serif'].join(', '),
+    fontFamily: ['Roboto', 'sans-serif'].join(', '),
     body1: {
       fontSize: '1.6rem'
     },
@@ -109,6 +109,9 @@ const theme = createMuiTheme({
       textTransform: 'uppercase',
       fontWeight: 'normal'
     },
+    outlineTitle: {
+      textShadow: `-1px 0 ${primaryColor}, 0 1px ${primaryColor}, 1px 0 ${primaryColor}, 0 -1px ${primaryColor}`
+    },
     inSideDrawer: {
       transform: 'translateY(0)',
       opacity: 1,
@@ -135,4 +138,4 @@ const theme = createMuiTheme({
   }
 })
 
-export default theme
+export default theme 

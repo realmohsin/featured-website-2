@@ -5,9 +5,10 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   heroSection: {
-    marginTop: '-2.5rem',
+    marginTop: '-2.2rem',
     position: 'relative',
     height: '74rem',
+    height: '63rem',
     [theme.breakpoints.down('md')]: {
       height: '50rem'
     },
@@ -59,14 +60,15 @@ const HeroSection = () => {
 
   return (
     <section className={classes.heroSection}>
-      <h1 className={classes.heroSectionTitle}>
+      {/* <h1 className={classes.heroSectionTitle}>
         {data.contentfulRomanoHomePage.heroImageTitle}
-      </h1>
+      </h1> */}
       <GatsbyImage
         image={image}
         layout='fullWidth'
         alt={'Romana Law Lawyers'}
         className={classes.heroImage}
+        objectPosition='top'
       />
     </section>
   )

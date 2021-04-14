@@ -38,7 +38,7 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className={classes.teamSection}>
+    <section className={classes.teamSection} id='reviews-section'>
       <Container>
         <h2 className={classes.teamSectionTitle}>Reviews</h2>
         <Grid container>

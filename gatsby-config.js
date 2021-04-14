@@ -1,6 +1,9 @@
 const path = require(`path`)
 
-if (process.env.NODE_ENV === 'development') {
+if (
+  process.env.NODE_ENV === 'development' ||
+  process.env.NODE_ENV === 'production'
+) {
   require('dotenv').config({
     path: '.env.development'
   })
@@ -19,7 +22,6 @@ module.exports = {
       resolve: 'gatsby-plugin-material-ui',
       options: { stylesProvider: { injectFirst: true } }
     },
-    `gatsby-plugin-transition-link`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,

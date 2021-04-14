@@ -100,7 +100,7 @@ const BlogMediaSection = props => {
               <div className={classes.videoContainer}>
                 <iframe
                   title=''
-                  src='https://www.youtube.com/embed/Bva8ARJrCog'
+                  src='https://www.youtube.com/embed/oiUsGImX4uY'
                   frameborder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowfullscreen
@@ -124,7 +124,7 @@ const BlogMediaSection = props => {
               <div className={classes.videoContainer}>
                 <iframe
                   title=''
-                  src='https://www.youtube.com/embed/Bva8ARJrCog'
+                  src='https://www.youtube.com/embed/NJELMaBtUFY'
                   frameborder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowfullscreen
@@ -148,7 +148,7 @@ const BlogMediaSection = props => {
               <div className={classes.videoContainer}>
                 <iframe
                   title=''
-                  src='https://www.youtube.com/embed/Bva8ARJrCog'
+                  src='https://www.youtube.com/embed/W4HDYa9kk_g'
                   frameborder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                   allowfullscreen
@@ -164,15 +164,15 @@ const BlogMediaSection = props => {
               </h5>
             </Grid>
           </Grid>
-          <Button
+          {/* <Button
             isLink
             text='Visit our Media Page'
             extraClassName={classes.button}
-          />
+          /> */}
         </div>
       </Container>
     </section>
   )
 }
 
-export default BlogMediaSection
+export default BlogMediaSection 

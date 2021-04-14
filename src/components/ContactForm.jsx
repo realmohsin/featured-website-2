@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { StaticImage, getImage } from 'gatsby-plugin-image'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
 import Input from './Input'
@@ -6,7 +7,16 @@ import Button from './Button'
 
 const useStyles = makeStyles(theme => ({
   contactSection: {
-    padding: '12rem 0'
+    padding: '12rem 0',
+    background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%)`,
+    position: 'relative',
+    '& .gatsby-image-wrapper-constrained': {
+      position: 'absolute',
+      top: 0,
+      bottom: 0,
+      right: 0,
+      left: 0
+    }
   },
   contactTitle: {
     ...theme.custom.title2,
@@ -34,6 +44,9 @@ const useStyles = makeStyles(theme => ({
     '&:hover': {
       color: theme.palette.primary.main
     }
+  },
+  lightBg: {
+    zIndex: -10
   }
 }))
 
@@ -56,6 +69,10 @@ const ContactSection = props => {
 
   return (
     <section className={classes.contactSection}>
+      <StaticImage
+        src='../assets/images/light-bg.png'
+        className={classes.lightBg}
+      />
       <Container>
         <h2 className={classes.contactTitle}>How Can We Help?</h2>
         <div className={classes.telephoneContainer}>

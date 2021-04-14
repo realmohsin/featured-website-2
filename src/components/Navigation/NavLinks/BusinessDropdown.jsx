@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import {
   makeStyles,
   Box,
@@ -7,19 +8,18 @@ import {
   Typography,
   Button
 } from '@material-ui/core'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
   nameDropdown: {
     opacity: 0,
     pointerEvents: 'none',
-    border: `1px solid ${theme.palette.secondary.main}`,
+    // border: `2px solid ${theme.palette.primary.main}`,
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
     width: '23rem',
-    height: '30rem', // 4.75rem each
-    background: theme.palette.primary.dark,
+    height: '34.75rem', // 4.75rem each
+    background: '#CCAB62',
     boxShadow: theme.shadows[5],
     '& > li': {
       flex: '1',
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   nameLink: {
     // ...theme.custom.navLinkText,
-    color: theme.palette.secondary.main,
+    color: theme.palette.primary.dark,
     flex: 1,
     display: 'flex',
     alignItems: 'center',
@@ -56,69 +56,54 @@ const BusinessDropdown = ({ inSideDrawer }) => {
       direction='column'
     >
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/business/small-business-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/business/small-business-law`} className={classes.nameLink}>
           Small Business Law
-        </AniLink>
+        </Link>
       </Grid>
 
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/business/startup-lawyers`}
-          className={classes.nameLink}
-        >
+        <Link to={`/business/startup-lawyers`} className={classes.nameLink}>
           Start-Up Law
-        </AniLink>
+        </Link>
       </Grid>
 
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
+        <Link
           to={`/business/secured-transactions`}
           className={classes.nameLink}
         >
           Secured Transactions
-        </AniLink>
+        </Link>
       </Grid>
 
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/business/insolvency`}
-          className={classes.nameLink}
-        >
+        <Link to={`/business/insolvency`} className={classes.nameLink}>
           Insolvency
-        </AniLink>
+        </Link>
       </Grid>
 
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
-          to={`/business/internet-law`}
-          className={classes.nameLink}
-        >
+        <Link to={`/business/internet-law`} className={classes.nameLink}>
           Internet Law
-        </AniLink>
+        </Link>
       </Grid>
 
       <Grid item component='li'>
-        <AniLink
-          fade
-          duration={1}
+        <Link
           to={`/business/business-agreements-partnership-operating-shareholder`}
           className={classes.nameLink}
         >
           Business Agreements
-        </AniLink>
+        </Link>
+      </Grid>
+
+      <Grid item component='li'>
+        <Link
+          to={`/business/business-agreements-partnership-operating-shareholder`}
+          className={classes.nameLink}
+        >
+          Business Agreements
+        </Link>
       </Grid>
     </Grid>
   )

@@ -1,8 +1,8 @@
 import React from 'react'
 import clsx from 'clsx'
+import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
 import { Container } from '@material-ui/core'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import BusinessDropdown from './NavLinks/BusinessDropdown'
 import EntertainmentDropdown from './NavLinks/EntertainmentDropdown'
 import DisputeDropdown from './NavLinks/DisputeDropdown'
@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     position: 'sticky',
     top: 58,
     zIndex: 10,
-    marginTop: '-2.2rem'
+    marginTop: '-3.2rem'
   },
   navbar: {
     zIndex: 1,
@@ -20,6 +20,7 @@ const useStyles = makeStyles(theme => ({
     borderRadius: '1rem',
     // backgroundColor: '#F9F9F9',
     backgroundColor: theme.palette.primary.dark,
+    boxShadow: theme.shadows[6],
     [theme.breakpoints.down('md')]: {
       margin: '0 2rem'
     }
@@ -78,56 +79,41 @@ const Navbar = props => {
       <nav className={classes.navbar}>
         <ul className={classes.navList}>
           <li className={classes.navItem}>
-            <AniLink cover bg='#663399' to={`/`} className={classes.navLink}>
+            <Link to={`/`} className={classes.navLink}>
               Home
-            </AniLink>
+            </Link>
           </li>
           <li className={classes.navItem}>
-            <AniLink
-              fade
-              duration={1}
-              to={`/about`}
-              className={classes.navLink}
-            >
+            <Link to={`/about`} className={classes.navLink}>
               About
-            </AniLink>
+            </Link>
           </li>
           <li className={classes.navItem}>
-            <div className={classes.navLink}>Business</div>
+            <div className={classes.navLink}>Business Law</div>
             <BusinessDropdown />
           </li>
           <li className={clsx(classes.navItem, classes.entertainmentLawItem)}>
-            <div className={classes.navLink}>Entertainment</div>
+            <div className={classes.navLink}>Entertainment Law</div>
             <EntertainmentDropdown />
           </li>
           <li className={classes.navItem}>
             <div className={classes.navLink}>Disputes</div>
             <DisputeDropdown />
           </li>
-          <li className={classes.navItem}>
-            <AniLink fade duration={1} to={`/blog`} className={classes.navLink}>
+          {/* <li className={classes.navItem}>
+            <Link to={`/blog`} className={classes.navLink}>
               Blog
-            </AniLink>
-          </li>
+            </Link>
+          </li> */}
           <li className={classes.navItem}>
-            <AniLink
-              fade
-              duration={1}
-              to={`/careers`}
-              className={classes.navLink}
-            >
+            <Link to={`/careers`} className={classes.navLink}>
               Careers
-            </AniLink>
+            </Link>
           </li>
           <li className={classes.navItem}>
-            <AniLink
-              fade
-              duration={1}
-              to={`/contact`}
-              className={classes.navLink}
-            >
+            <Link to={`/contact`} className={classes.navLink}>
               Contact
-            </AniLink>
+            </Link>
           </li>
         </ul>
       </nav>

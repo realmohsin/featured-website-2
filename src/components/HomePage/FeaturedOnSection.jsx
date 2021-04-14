@@ -17,6 +17,7 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '3.5rem',
     textTransform: 'uppercase',
     letterSpacing: '0.5px'
+    // ...theme.custom.outlineTitle
   },
   featuredGrid: {
     display: 'grid',

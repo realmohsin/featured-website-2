@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
   rowTitle: {
     ...theme.custom.title4,
     textAlign: 'center',
-    marginBottom: '4rem',
+    marginBottom: '3rem',
     [theme.breakpoints.down('md')]: {
       fontSize: '2rem',
       marginBottom: '1.5rem'
@@ -54,31 +54,6 @@ const useStyles = makeStyles(theme => ({
 
 const FocusSection = props => {
   const classes = useStyles()
-  // const data = useStaticQuery(graphql`
-  //   query {
-  //     focus1: file(name: { eq: "focus-1" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 1275, maxHeight: 828) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     focus2: file(name: { eq: "focus-2" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 1275, maxHeight: 828) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //     focus3: file(name: { eq: "focus-3" }) {
-  //       childImageSharp {
-  //         fluid(maxWidth: 1275, maxHeight: 828) {
-  //           ...GatsbyImageSharpFluid
-  //         }
-  //       }
-  //     }
-  //   }
-  // `)
 
   return (
     <section className={classes.focusSection}>
