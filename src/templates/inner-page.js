@@ -140,6 +140,7 @@ const InnerPageTemplate = ({
             image={image}
             alt={innerPageData.title}
             className={classes.heroImage}
+            layout='fullWidth'
           />
         </div>
 

@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
     width: '23rem',
-    height: '34.75rem', // 4.75rem each
+    height: '30rem', // 4.75rem each
     background: '#CCAB62',
     boxShadow: theme.shadows[5],
     '& > li': {
@@ -85,15 +85,6 @@ const BusinessDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link to={`/business/internet-law`} className={classes.nameLink}>
           Internet Law
-        </Link>
-      </Grid>
-
-      <Grid item component='li'>
-        <Link
-          to={`/business/business-agreements-partnership-operating-shareholder`}
-          className={classes.nameLink}
-        >
-          Business Agreements
         </Link>
       </Grid>
 

@@ -96,6 +96,14 @@ const DisputeDropdown = ({ inSideDrawer }) => {
           Defamation
         </Link>
       </Grid>
+      <Grid item component='li'>
+        <Link
+          to={`/business-disputes/business-torts`}
+          className={classes.nameLink}
+        >
+          Business Torts
+        </Link>
+      </Grid>
     </Grid>
   )
 }
