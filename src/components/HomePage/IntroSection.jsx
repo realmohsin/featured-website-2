@@ -13,7 +13,7 @@
 //       top: 0,
 //       bottom: 0,
 //       right: 0,
-//       left: 0
+//       left: 0155049
 //     },
 //     [theme.breakpoints.down('md')]: {
 //       padding: '12rem 9rem'
@@ -152,10 +152,10 @@ const useStyles = makeStyles(theme => ({
   aboutTitle: {
     ...theme.custom.title2,
     textAlign: 'left',
-    fontSize: '5.6rem',
+    fontSize: '5.8rem',
     paddingLeft: '5rem',
-    marginBottom: '2rem',
-    marginTop: '3rem',
+    marginBottom: '4rem',
+    marginTop: '0rem',
     [theme.breakpoints.down('md')]: {
       fontSize: '4.6rem'
     },
