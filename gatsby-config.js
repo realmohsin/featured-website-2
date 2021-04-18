@@ -1,9 +1,6 @@
 const path = require(`path`)
 
-if (
-  process.env.NODE_ENV === 'development' ||
-  process.env.NODE_ENV === 'production'
-) {
+if (process.env.NODE_ENV === 'development') {
   require('dotenv').config({
     path: '.env.development'
   })
