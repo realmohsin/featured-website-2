@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Typography, Container } from '@material-ui/core'
+import { Grid, Typography, Container, Hidden } from '@material-ui/core'
 import {
   FaFacebook,
   FaTwitter,
@@ -25,7 +25,8 @@ const useStyles = makeStyles(theme => ({
       left: 0
     },
     [theme.breakpoints.down('xs')]: {
-      textAlign: 'center'
+      textAlign: 'center',
+      padding: '8rem 0 6rem'
     }
   },
   leftSide: {
@@ -103,7 +104,10 @@ const useStyles = makeStyles(theme => ({
   },
   copyright: {
     marginTop: '10rem',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    [theme.breakpoints.down('xs')]: {
+      margin: '0 auto'
+    }
   }
 }))
 
@@ -159,29 +163,36 @@ const Footer = () => {
               </div>
             </div>
           </Grid>
-          <Grid item xs={12} sm={6} md={4} className={classes.middleSide}>
-            <Typography variant='body1' className={classes.contactMessage}>
-              Contact an Experienced Business Lawyer Now:
-            </Typography>
-            <a href='tel:123-456-7890' className={classes.telephoneLink}>
-              (123) 456-7890
-            </a>
-            <Typography variant='body1' className={classes.helpLink}>
-              <Link to='/contact'>How Can We Help?</Link>
-            </Typography>
-            <Typography variant='body1' className={classes.helpLink}>
-              <Link to='/about#reviews-section'>Client Reviews</Link>
-            </Typography>
-          </Grid>
+          <Hidden smDown>
+            <Grid item xs={12} sm={6} md={4} className={classes.middleSide}>
+              <Typography variant='body1' className={classes.contactMessage}>
+                Contact an Experienced Business Lawyer Now:
+              </Typography>
+              <a href='tel:123-456-7890' className={classes.telephoneLink}>
+                (123) 456-7890
+              </a>
+              <Typography variant='body1' className={classes.helpLink}>
+                <Link to='/contact'>How Can We Help?</Link>
+              </Typography>
+              <Typography variant='body1' className={classes.helpLink}>
+                <Link to='/about#reviews-section'>Client Reviews</Link>
+              </Typography>
+            </Grid>
+          </Hidden>
+
           <Grid item xs={12} sm={12} md={4} className={classes.rightSide}>
-            <Typography variant='body2' className={classes.blurb}>
-              OUR BUSINESS LAWYERS WORK WITH CLIENTS THROUGHOUT THE WORLD. IN
-              NEW YORK, WE REPRESENT PEOPLE AND BUSINESSES BASED IN MANHATTAN,
-              BROOKLYN, QUEENS, BRONX, STATEN ISLAND, LONG ISLAND, NASSAU,
-              SUFFOLK, WESTCHESTER, UPSTATE AND WESTERN NEW YORK. OUR
-              ENTERTAINMENT LAWYERS ALSO REPRESENT INDIVIDUALS AND ORGANIZATIONS
-              LOCATED IN LOS ANGELES, TORONTO, LONDON, SYDNEY AND HONG KONG.
-            </Typography>
+            <Hidden smDown>
+              <Typography variant='body2' className={classes.blurb}>
+                OUR BUSINESS LAWYERS WORK WITH CLIENTS THROUGHOUT THE WORLD. IN
+                NEW YORK, WE REPRESENT PEOPLE AND BUSINESSES BASED IN MANHATTAN,
+                BROOKLYN, QUEENS, BRONX, STATEN ISLAND, LONG ISLAND, NASSAU,
+                SUFFOLK, WESTCHESTER, UPSTATE AND WESTERN NEW YORK. OUR
+                ENTERTAINMENT LAWYERS ALSO REPRESENT INDIVIDUALS AND
+                ORGANIZATIONS LOCATED IN LOS ANGELES, TORONTO, LONDON, SYDNEY
+                AND HONG KONG.
+              </Typography>
+            </Hidden>
+
             <Typography variant='body1' className={classes.copyright}>
               ©2003–2020 ROMANO LAW PLLC. <br /> ALL RIGHTS RESERVED. NYC
             </Typography>

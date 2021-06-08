@@ -10,7 +10,7 @@ import DisputeDropdown from './NavLinks/DisputeDropdown'
 const useStyles = makeStyles(theme => ({
   navContainer: {
     position: 'sticky',
-    top: 58,
+    top: 59,
     zIndex: 10,
     marginTop: '-3.2rem'
   },

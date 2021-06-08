@@ -14,12 +14,12 @@ const useStyles = makeStyles(theme => ({
   nameDropdown: {
     opacity: 0,
     pointerEvents: 'none',
-    // border: `2px solid ${theme.palette.primary.main}`,
+    border: `1px solid ${theme.palette.secondary.main}`,
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
     width: '23rem',
     height: '30rem', // 4.75rem each
-    background: '#CCAB62',
+    backgroundColor: theme.palette.primary.dark,
     boxShadow: theme.shadows[5],
     '& > li': {
       flex: '1',
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   },
   nameLink: {
     // ...theme.custom.navLinkText,
-    color: theme.palette.primary.dark,
+    color: theme.palette.secondary.main,
     flex: 1,
     display: 'flex',
     alignItems: 'center',

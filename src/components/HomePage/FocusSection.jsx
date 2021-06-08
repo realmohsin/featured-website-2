@@ -6,10 +6,16 @@ import Button from '../Button'
 
 const useStyles = makeStyles(theme => ({
   focusSection: {
-    padding: '12rem 0'
+    padding: '12rem 0',
+    [theme.breakpoints.down('xs')]: {
+      padding: '8rem 0'
+    }
   },
   focusTitle: {
-    ...theme.custom.title2
+    ...theme.custom.title2,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   row: {
     marginBottom: '5rem'
@@ -27,7 +33,10 @@ const useStyles = makeStyles(theme => ({
     marginBottom: '3rem',
     [theme.breakpoints.down('md')]: {
       fontSize: '2rem',
-      marginBottom: '1.5rem'
+      marginBottom: '1.2rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.7rem'
     }
   },
   divider: {
@@ -72,6 +81,7 @@ const FocusSection = props => {
                 isLink
                 text='Learn More'
                 extraClassName={classes.button}
+                href='/business/small-business-law'
               />
             </Hidden>
           </Grid>
@@ -83,7 +93,12 @@ const FocusSection = props => {
             />
           </Grid>
           <Hidden mdUp>
-            <Button isLink text='Learn More' extraClassName={classes.button} />
+            <Button
+              isLink
+              text='Learn More'
+              extraClassName={classes.button}
+              href='/business/small-business-law'
+            />
           </Hidden>
         </Grid>
 
@@ -102,6 +117,7 @@ const FocusSection = props => {
                   isLink
                   text='Learn More'
                   extraClassName={classes.button}
+                  href='/entertainment/trademark-law'
                 />
               </Hidden>
             </Grid>
@@ -115,7 +131,12 @@ const FocusSection = props => {
           </Grid>
 
           <Hidden mdUp>
-            <Button isLink text='Learn More' extraClassName={classes.button} />
+            <Button
+              isLink
+              text='Learn More'
+              extraClassName={classes.button}
+              href='/entertainment/trademark-law'
+            />
           </Hidden>
 
           <Hidden mdDown>
@@ -131,6 +152,7 @@ const FocusSection = props => {
                 isLink
                 text='Learn More'
                 extraClassName={classes.button}
+                href='/entertainment/trademark-law'
               />
             </Grid>
           </Hidden>
@@ -146,7 +168,15 @@ const FocusSection = props => {
               with the litigation or defense of commercial matters in state,
               federal bankruptcy, federal district and federal appellate courts.
             </Typography>
-            <Button isLink text='Learn More' extraClassName={classes.button} />
+
+            <Hidden mdDown>
+              <Button
+                isLink
+                text='Learn More'
+                extraClassName={classes.button}
+                href='/business-disputes/arbitration'
+              />
+            </Hidden>
           </Grid>
           <Grid item xs={12} md={7} className={classes.rowImgContainer}>
             <StaticImage
@@ -154,6 +184,15 @@ const FocusSection = props => {
               alt='Business Disputes'
             />
           </Grid>
+
+          <Hidden mdUp>
+            <Button
+              isLink
+              text='Learn More'
+              extraClassName={classes.button}
+              href='/business-disputes/arbitration'
+            />
+          </Hidden>
         </Grid>
       </Container>
     </section>

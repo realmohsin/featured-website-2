@@ -16,11 +16,17 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       right: 0,
       left: 0
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '8rem 0'
     }
   },
   instagramTitle: {
     ...theme.custom.title2,
-    marginBottom: '6rem'
+    marginBottom: '6rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   instagramGrid: {
     padding: '0 7rem',

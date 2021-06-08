@@ -7,7 +7,10 @@ const useStyles = makeStyles(theme => ({
   aboutHeroSection: {
     marginTop: '-2rem',
     height: '42rem',
-    overflow: 'hidden'
+    overflow: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+      height: 'auto'
+    }
   },
   heroImage: {
     transform: 'translateY(-10%)'

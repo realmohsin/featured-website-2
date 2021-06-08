@@ -39,7 +39,10 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center'
   },
   featuredCompanyImg: {
-    width: '19.1rem'
+    width: '19.1rem',
+    [theme.breakpoints.down('xs')]: {
+      width: 'auto'
+    }
   },
   divider: {
     width: '100%',

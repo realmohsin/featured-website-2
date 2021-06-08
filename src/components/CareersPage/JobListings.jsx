@@ -10,13 +10,15 @@ const useStyles = makeStyles(theme => ({
     ...theme.custom.title3,
     marginTop: '9rem',
     marginBottom: '3rem',
-    textShadow: `-1px 0 ${theme.palette.primary.main}, 0 1px ${theme.palette.primary.main}, 1px 0 ${theme.palette.primary.main}, 0 -1px ${theme.palette.primary.main}`
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   listTitle: {
     ...theme.custom.title5,
     letterSpacing: '0.75px',
     margin: '1.8rem 0',
-    textShadow: `-1px 0 ${theme.palette.primary.main}, 0 1px ${theme.palette.primary.main}, 1px 0 ${theme.palette.primary.main}, 0 -1px ${theme.palette.primary.main}`
+    [theme.breakpoints.down('xs')]: {}
   },
   list: {
     listStyle: 'disc outside none',

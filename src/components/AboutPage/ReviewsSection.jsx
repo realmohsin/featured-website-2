@@ -19,8 +19,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.6rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '4rem',
-      paddingLeft: '1.2rem'
+      fontSize: '3.4rem',
+      paddingLeft: '3.2rem',
+      marginBottom: 0
     }
   },
   moreReviewsButton: {

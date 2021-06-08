@@ -59,7 +59,6 @@ const useStyles = makeStyles(theme => ({
   nested: {
     paddingLeft: theme.spacing(4)
   },
-
   link: {
     color: theme.palette.primary.main,
     fontSize: '1.2rem',
@@ -72,7 +71,9 @@ const useStyles = makeStyles(theme => ({
     paddingRight: '1rem',
     fontWeight: 'normal'
   },
-
+  logoContainer: {
+    padding: '7rem 8rem 4rem'
+  },
   logo: {
     width: '22rem',
     margin: '0 auto'
@@ -117,7 +118,7 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
       </CSSTransition>
 
       <div className={sideDrawerClasses.join(' ')}>
-        <Box>
+        <Box className={classes.logoContainer}>
           <StaticImage src='../../../assets/images/logo.png' alt='Logo' />
         </Box>
 

@@ -9,9 +9,10 @@ import InstagramSection from '../components/HomePage/InstagramSection'
 import MediaSection from '../components/HomePage/MediaSection'
 import ContactForm from '../components/ContactForm'
 
-export default function Home () {
+export default function Home ({ location }) {
+  console.log(location)
   return (
-    <Layout>
+    <Layout location={location}>
       <HeroSection />
       <IntroSection />
       <FeaturedOnSection />

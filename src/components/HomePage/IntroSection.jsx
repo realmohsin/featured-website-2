@@ -160,19 +160,20 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.6rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '4rem',
-      paddingLeft: '1.2rem'
+      fontSize: '3.4rem',
+      paddingLeft: '1.2rem',
+      marginBottom: '3rem'
     }
   },
   aboutSubTitle: {
     ...theme.custom.title3,
-    ...theme.custom.outlineTitle,
+    // ...theme.custom.outlineTitle,
     marginBottom: '3rem',
     [theme.breakpoints.down('md')]: {
       fontSize: '2.8rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '2.2rem'
+      fontSize: '2.1rem'
     }
   },
   gridItem: {
@@ -186,7 +187,7 @@ const useStyles = makeStyles(theme => ({
     // ...theme.custom.outlineTitle,
     letterSpacing: '1px',
     marginBottom: '3rem',
-    fontSize: '1.9rem'
+    fontSize: '1.6rem'
   },
   leftImg: {
     [theme.breakpoints.down('xs')]: {

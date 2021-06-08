@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
   gridItem: {
     padding: '4.5rem 4rem',
     [theme.breakpoints.down('xs')]: {
-      padding: '4rem 1.2rem'
+      padding: '4rem 3.2rem'
     }
   },
   nameAndDate: {
@@ -31,7 +31,10 @@ const useStyles = makeStyles(theme => ({
     display: 'flex'
   },
   text: {
-    flex: 1
+    flex: 1,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.2rem'
+    }
   },
   platformIcon: {
     marginTop: '1rem',

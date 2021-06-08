@@ -16,15 +16,16 @@ const useStyles = makeStyles(theme => ({
     // overflow: 'hidden',
     position: 'relative',
     [theme.breakpoints.down('xs')]: {
-      minWidth: '60%',
-      marginTop: 0,
+      // minWidth: '60%',
+      // marginTop: 0
       height: 'auto'
     }
   },
   heroImage: {
     transform: 'translateY(-10%)',
     [theme.breakpoints.down('xs')]: {
-      transform: 'translateY(0)'
+      transform: 'translateY(0)',
+      height: '40vh'
     }
   },
   mainBlurb: {
@@ -47,7 +48,9 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       position: 'static',
       transform: 'translate(0, 0)',
-      padding: '3rem 4rem 6rem'
+      padding: '5rem 4rem 5rem',
+      fontSize: '1.6rem',
+      lineHeight: 1.4
     }
   },
   mainTitle: {
@@ -55,7 +58,10 @@ const useStyles = makeStyles(theme => ({
     fontSize: '4.8rem',
     color: '#CCAB63',
     fontWeight: 'normal',
-    textAlign: 'center'
+    textAlign: 'center',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   imageContainer: {
     height: '100%',
@@ -69,7 +75,10 @@ const useStyles = makeStyles(theme => ({
     fontSize: '2.2rem',
     color: '#0E5C60',
     marginBottom: '0.5rem',
-    marginTop: '6rem'
+    marginTop: '6rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.8rem'
+    }
   },
   contentSection: {
     padding: '3rem 18rem',
@@ -80,13 +89,16 @@ const useStyles = makeStyles(theme => ({
       padding: '3rem 4rem'
     },
     [theme.breakpoints.down('xs')]: {
-      padding: '3rem 1.2rem'
+      padding: '2rem 1.2rem'
     }
   },
   contentPara: {
     marginBottom: '2rem',
     fontSize: '1.6rem',
-    lineHeight: 1.7
+    lineHeight: 1.7,
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.4rem'
+    }
   },
   contentLink: {
     color: '#CCAB63',

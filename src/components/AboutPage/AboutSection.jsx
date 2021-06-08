@@ -6,7 +6,10 @@ import { Grid, Typography, Container } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   aboutSection: {
-    padding: '2rem 0 12rem'
+    padding: '2rem 0 12rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '0rem 0 8rem'
+    }
   },
   symbolDivider: {
     width: '3.5rem',
@@ -28,7 +31,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.6rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '4rem',
+      fontSize: '3.4rem',
       paddingLeft: '1.2rem'
     }
   },
@@ -39,7 +42,7 @@ const useStyles = makeStyles(theme => ({
       fontSize: '2.8rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '2.2rem'
+      fontSize: '2.1rem'
     }
   },
   gridItem: {

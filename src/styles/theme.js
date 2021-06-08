@@ -30,7 +30,10 @@ const theme = createMuiTheme({
     htmlFontSize: 10,
     fontFamily: ['Roboto', 'sans-serif'].join(', '),
     body1: {
-      fontSize: '1.6rem'
+      fontSize: '1.6rem',
+      '@media (max-width: 600px)': {
+        fontSize: '1.4rem'
+      }
     },
     body2: {
       fontSize: '1.4rem',
@@ -81,7 +84,10 @@ const theme = createMuiTheme({
     title1: {
       fontFamily: ['Piazzolla', 'serif'].join(', '),
       fontSize: '5.1rem',
-      color: primaryColor
+      color: primaryColor,
+      '@media (max-width: 600px)': {
+        fontSize: '2rem'
+      }
     },
     title2: {
       fontFamily: ['PT Serif', 'serif'].join(', '),
@@ -138,4 +144,4 @@ const theme = createMuiTheme({
   }
 })
 
-export default theme 
+export default theme

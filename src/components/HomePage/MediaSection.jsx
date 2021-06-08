@@ -7,7 +7,10 @@ import Button from '../Button'
 
 const useStyles = makeStyles(theme => ({
   blogMediaSection: {
-    padding: '10rem 0 12rem'
+    padding: '10rem 0 12rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '8rem 0'
+    }
   },
   titleList: {
     display: 'flex',
@@ -15,15 +18,17 @@ const useStyles = makeStyles(theme => ({
   },
   title: {
     ...theme.custom.title2,
-    margin: '0 3rem'
+    margin: '0 3rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem',
+      marginBottom: '2rem'
+    }
   },
   activeTitle: {
     color: theme.palette.primary.main,
     textDecoration: 'underline'
   },
-
   mediaSection: {},
-
   itemDate: {
     color: theme.palette.primary.main,
     marginBottom: '1.2rem'
@@ -32,7 +37,10 @@ const useStyles = makeStyles(theme => ({
     margin: '3rem auto'
   },
   mediaItem: {
-    padding: '3rem 4rem 3rem'
+    padding: '3rem 4rem 3rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '3rem 1rem 4rem'
+    }
   },
   videoContainer: {
     position: 'relative',
@@ -175,4 +183,4 @@ const BlogMediaSection = props => {
   )
 }
 
-export default BlogMediaSection 
+export default BlogMediaSection

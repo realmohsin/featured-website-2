@@ -7,13 +7,15 @@ const useStyles = makeStyles(theme => ({
   heroSection: {
     marginTop: '-2.2rem',
     position: 'relative',
-    height: '74rem',
+    // height: '74rem',
     height: '63rem',
     [theme.breakpoints.down('md')]: {
       height: '50rem'
     },
     [theme.breakpoints.down('sm')]: {
-      height: '44rem'
+      // height: '44rem'
+      width: '100%',
+      height: 'auto'
     }
   },
   heroSectionTitle: {

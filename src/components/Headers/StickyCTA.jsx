@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     padding: '0.95rem',
     position: 'fixed',
     boxShadow: theme.shadows[6],
-    zIndex: 100
+    zIndex: 10
   },
   stickyCtaText: {
     textTransform: 'uppercase',

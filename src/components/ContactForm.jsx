@@ -16,11 +16,17 @@ const useStyles = makeStyles(theme => ({
       bottom: 0,
       right: 0,
       left: 0
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '8rem 0'
     }
   },
   contactTitle: {
     ...theme.custom.title2,
-    marginBottom: '2rem'
+    marginBottom: '2rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   form: {
     maxWidth: '40rem',
@@ -32,7 +38,11 @@ const useStyles = makeStyles(theme => ({
   telephoneContainer: {
     margin: '0 auto',
     width: 'max-content',
-    marginBottom: '8rem'
+    marginBottom: '8rem',
+    [theme.breakpoints.down('xs')]: {
+      width: 'auto',
+      textAlign: 'center'
+    }
   },
   telephoneLink: {
     color: theme.palette.secondary.dark,

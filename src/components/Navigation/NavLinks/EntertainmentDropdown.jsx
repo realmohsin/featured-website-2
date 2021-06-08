@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
     transition: 'all 0.3s',
     width: '23rem',
     height: '30rem', // 4.75rem each
-    background: '#CCAB62',
+    backgroundColor: theme.palette.primary.dark,
     boxShadow: theme.shadows[3],
     '& > li': {
       flex: '1',
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     }
   },
   nameLink: {
-    color: theme.palette.primary.dark,
+    color: theme.palette.secondary.main,
     flex: 1,
     display: 'flex',
     alignItems: 'center',

@@ -4,19 +4,29 @@ import { Container, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
   careersIntroSection: {
-    padding: '5rem 0 0'
+    padding: '5rem 0 0',
+    [theme.breakpoints.down('xs')]: {
+      padding: '2rem 0.6rem 0'
+    }
   },
   careersTitle: {
     ...theme.custom.title2,
     // textAlign: 'left',
     marginTop: '2rem',
     marginBottom: '3rem',
-    fontSize: '5.6rem'
+    fontSize: '5.6rem',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '3.4rem'
+    }
   },
   joinSubtitle: {
     ...theme.custom.title3,
     marginBottom: '3rem',
-    textShadow: `-1px 0 ${theme.palette.primary.main}, 0 1px ${theme.palette.primary.main}, 1px 0 ${theme.palette.primary.main}, 0 -1px ${theme.palette.primary.main}`
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '2.2rem',
+      textAlign: 'center'
+    }
+    // textShadow: `-1px 0 ${theme.palette.primary.main}, 0 1px ${theme.palette.primary.main}, 1px 0 ${theme.palette.primary.main}, 0 -1px ${theme.palette.primary.main}`
   },
   positionLink: {
     marginBottom: '1.5rem',

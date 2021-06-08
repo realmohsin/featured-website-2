@@ -35,7 +35,10 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     letterSpacing: '1px',
     transition: '300ms ease all',
-    pointerEvents: 'none'
+    pointerEvents: 'none',
+    [theme.breakpoints.down('xs')]: {
+      fontSize: '1.4rem'
+    }
   },
   shrunkLabel: {
     top: '-1.4rem',

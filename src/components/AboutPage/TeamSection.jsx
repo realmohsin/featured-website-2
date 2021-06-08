@@ -7,7 +7,10 @@ import teamMembers from '../../data/team-members'
 
 const useStyles = makeStyles(theme => ({
   teamSection: {
-    padding: '4rem 0 10rem'
+    padding: '4rem 0 10rem',
+    [theme.breakpoints.down('xs')]: {
+      padding: '4rem 0 6rem'
+    }
   },
   teamSectionTitle: {
     ...theme.custom.title2,
@@ -18,8 +21,9 @@ const useStyles = makeStyles(theme => ({
       fontSize: '4.6rem'
     },
     [theme.breakpoints.down('xs')]: {
-      fontSize: '4rem',
-      paddingLeft: '3.5rem'
+      fontSize: '3.4rem',
+      paddingLeft: '3.5rem',
+      marginBottom: '2rem'
     }
   },
   gridItem: {
@@ -31,7 +35,10 @@ const useStyles = makeStyles(theme => ({
   name: {
     ...theme.custom.title5,
     letterSpacing: '0.7px',
-    marginTop: '1rem'
+    marginTop: '1rem',
+    [theme.breakpoints.down('xs')]: {
+      marginTop: 0
+    }
   },
   title: {
     // textTransform: 'uppercase',
