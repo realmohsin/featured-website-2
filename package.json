@@ -1,7 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "name": "featured-website-2",
+  "description": "2nd Featured Website for realmohsin.com",
   "version": "0.1.0",
   "scripts": {
     "build": "gatsby build",
