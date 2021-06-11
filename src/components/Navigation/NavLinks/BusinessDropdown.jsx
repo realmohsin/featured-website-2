@@ -44,11 +44,26 @@ const useStyles = makeStyles(theme => ({
   },
   active: {
     backgroundColor: theme.palette.primary.light
+  },
+  activeInSideDrawer: {
+    color: `${theme.palette.secondary.main} !important`
   }
 }))
 
 const BusinessDropdown = ({ inSideDrawer, pathname }) => {
   const classes = useStyles()
+
+  const createClassNames = href => {
+    const classNames = [classes.nameLink]
+    if (pathname === href) {
+      classNames.push(classes.active)
+      if (inSideDrawer) {
+        classNames.push(classes.activeInSideDrawer)
+      }
+    }
+    return clsx(...classNames)
+  }
+
   return (
     <Grid
       container
@@ -62,10 +77,7 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/small-business-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business/small-business-law' && classes.active
-          )}
+          className={createClassNames(`/business/small-business-law`)}
         >
           Small Business Law
         </Link>
@@ -74,10 +86,7 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/startup-lawyers`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business/startup-lawyers' && classes.active
-          )}
+          className={createClassNames(`/business/startup-lawyers`)}
         >
           Start-Up Law
         </Link>
@@ -86,10 +95,7 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/secured-transactions`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business/secured-transactions' && classes.active
-          )}
+          className={createClassNames(`/business/secured-transactions`)}
         >
           Secured Transactions
         </Link>
@@ -98,10 +104,7 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/insolvency`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business/insolvency' && classes.active
-          )}
+          className={createClassNames(`/business/insolvency`)}
         >
           Insolvency
         </Link>
@@ -110,10 +113,7 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/internet-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business/internet-law' && classes.active
-          )}
+          className={createClassNames(`/business/internet-law`)}
         >
           Internet Law
         </Link>
@@ -122,11 +122,8 @@ const BusinessDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business/business-agreements-partnership-operating-shareholder`}
-          className={clsx(
-            classes.nameLink,
-            pathname ===
-              '/business/business-agreements-partnership-operating-shareholder' &&
-              classes.active
+          className={createClassNames(
+            `/business/business-agreements-partnership-operating-shareholder`
           )}
         >
           Business Agreements

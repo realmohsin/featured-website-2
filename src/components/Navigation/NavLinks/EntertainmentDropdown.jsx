@@ -36,11 +36,26 @@ const useStyles = makeStyles(theme => ({
   },
   active: {
     backgroundColor: theme.palette.primary.light
+  },
+  activeInSideDrawer: {
+    color: `${theme.palette.secondary.main} !important`
   }
 }))
 
-const EntertainmentDropdown = ({ inSideDrawer }) => {
+const EntertainmentDropdown = ({ inSideDrawer, pathname }) => {
   const classes = useStyles()
+
+  const createClassNames = href => {
+    const classNames = [classes.nameLink]
+    if (pathname === href) {
+      classNames.push(classes.active)
+      if (inSideDrawer) {
+        classNames.push(classes.activeInSideDrawer)
+      }
+    }
+    return clsx(...classNames)
+  }
+
   return (
     <Grid
       container
@@ -54,10 +69,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/trademark-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/trademark-law' && classes.active
-          )}
+          className={createClassNames(`/entertainment/trademark-law`)}
         >
           Trademark Law
         </Link>
@@ -65,10 +77,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/art-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/art-law' && classes.active
-          )}
+          className={createClassNames(`/entertainment/art-law`)}
         >
           Art Law
         </Link>
@@ -76,10 +85,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/fashion-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/fashion-law' && classes.active
-          )}
+          className={createClassNames(`/entertainment/fashion-law`)}
         >
           Fashion Law
         </Link>
@@ -87,10 +93,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/film-financing`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/film-financing' && classes.active
-          )}
+          className={createClassNames(`/entertainment/film-financing`)}
         >
           Film Financing
         </Link>
@@ -98,10 +101,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/music-law`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/music-law' && classes.active
-          )}
+          className={createClassNames(`/entertainment/music-law`)}
         >
           Music Law
         </Link>
@@ -109,10 +109,7 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/entertainment/sports-law-attorney`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/entertainment/sports-law-attorney' && classes.active
-          )}
+          className={createClassNames(`/entertainment/sports-law-attorney`)}
         >
           Sports Law
         </Link>

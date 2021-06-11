@@ -37,11 +37,26 @@ const useStyles = makeStyles(theme => ({
   },
   active: {
     backgroundColor: theme.palette.primary.light
+  },
+  activeInSideDrawer: {
+    color: `${theme.palette.secondary.main} !important`
   }
 }))
 
 const DisputeDropdown = ({ inSideDrawer, pathname }) => {
   const classes = useStyles()
+
+  const createClassNames = href => {
+    const classNames = [classes.nameLink]
+    if (pathname === href) {
+      classNames.push(classes.active)
+      if (inSideDrawer) {
+        classNames.push(classes.activeInSideDrawer)
+      }
+    }
+    return clsx(...classNames)
+  }
+
   return (
     <Grid
       container
@@ -55,10 +70,7 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/arbitration`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/arbitration' && classes.active
-          )}
+          className={createClassNames(`/business-disputes/arbitration`)}
         >
           Arbitration
         </Link>
@@ -66,11 +78,7 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/breach-of-contract`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/breach-of-contract' &&
-              classes.active
-          )}
+          className={createClassNames(`/business-disputes/breach-of-contract`)}
         >
           Breach of Contract
         </Link>
@@ -78,10 +86,8 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/copyright-infringement`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/copyright-infringement' &&
-              classes.active
+          className={createClassNames(
+            `/business-disputes/copyright-infringement`
           )}
         >
           Copyright Infringement
@@ -90,10 +96,7 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/debt-collection`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/debt-collection' && classes.active
-          )}
+          className={createClassNames(`/business-disputes/debt-collection`)}
         >
           Debt Collection
         </Link>
@@ -101,10 +104,8 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/trademark-infringement`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/trademark-infringement' &&
-              classes.active
+          className={createClassNames(
+            `/business-disputes/trademark-infringement`
           )}
         >
           Trademark Infringement
@@ -113,10 +114,8 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/defamation-attorney-nyc`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/defamation-attorney-nyc' &&
-              classes.active
+          className={createClassNames(
+            `/business-disputes/defamation-attorney-nyc`
           )}
         >
           Defamation
@@ -125,10 +124,7 @@ const DisputeDropdown = ({ inSideDrawer, pathname }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/business-torts`}
-          className={clsx(
-            classes.nameLink,
-            pathname === '/business-disputes/business-torts' && classes.active
-          )}
+          className={createClassNames(`/business-disputes/business-torts`)}
         >
           Business Torts
         </Link>

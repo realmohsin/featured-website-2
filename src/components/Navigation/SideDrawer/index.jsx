@@ -8,6 +8,7 @@ import { FaAngleDown, FaAngleUp } from 'react-icons/fa'
 import BusinessDropdown from '../NavLinks/BusinessDropdown'
 import EntertainmentDropdown from '../NavLinks/EntertainmentDropdown'
 import DisputeDropdown from '../NavLinks/DisputeDropdown'
+import clsx from 'clsx'
 
 const useStyles = makeStyles(theme => ({
   sideDrawer: {
@@ -84,6 +85,11 @@ const useStyles = makeStyles(theme => ({
   subMenuSectionLink: {
     // height: 'auto !important'
     paddingLeft: '3.6rem'
+  },
+  activeInSidedrawer: {
+    color: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.light,
+    borderBottom: `0.5px solid ${theme.palette.primary.light}`
   }
 }))
 
@@ -111,6 +117,14 @@ const SideDrawer = ({ showing, closeSideDrawer, location }) => {
   if (showing) {
     sideDrawerClasses.push('showing')
   }
+
+  const createLinkClasses = href => {
+    const classNames = [classes.link]
+    if (href === location.pathname) {
+      classNames.push(classes.activeInSidedrawer)
+    }
+    return clsx(...classNames)
+  }
   return (
     <>
       <CSSTransition in={showing} unmountOnExit classNames='fade' timeout={500}>
@@ -131,7 +145,7 @@ const SideDrawer = ({ showing, closeSideDrawer, location }) => {
             </li>
 
             <li>
-              <Link to={`/about`} className={classes.link}>
+              <Link to={`/about`} className={createLinkClasses('/about')}>
                 About
               </Link>
             </li>
@@ -172,20 +186,14 @@ const SideDrawer = ({ showing, closeSideDrawer, location }) => {
               <DisputeDropdown inSideDrawer pathname={location.pathname} />
             </Collapse>
 
-            {/* <li>
-              <Link to={`/blog`} className={classes.link}>
-                Blog
-              </Link>
-            </li> */}
-
             <li>
-              <Link to={`/careers`} className={classes.link}>
+              <Link to={`/careers`} className={createLinkClasses('/careers')}>
                 Careers
               </Link>
             </li>
 
             <li>
-              <Link to={`/contact`} className={classes.link}>
+              <Link to={`/contact`} className={createLinkClasses('/contact')}>
                 Contact
               </Link>
             </li>
