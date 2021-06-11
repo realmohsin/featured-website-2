@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
     width: '23rem',
-    height: '30rem', // 4.75rem each
+    height: '27rem', // 4.75rem each
     backgroundColor: theme.palette.primary.dark,
     boxShadow: theme.shadows[3],
     '& > li': {
@@ -26,12 +26,16 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingLeft: '2rem',
     transition: 'all 0.1s',
+    fontSize: '1.3rem',
     '&:hover': {
       backgroundColor: theme.palette.primary.light
     }
   },
   inSideDrawer: {
     ...theme.custom.inSideDrawer
+  },
+  active: {
+    backgroundColor: theme.palette.primary.light
   }
 }))
 
@@ -48,34 +52,67 @@ const EntertainmentDropdown = ({ inSideDrawer }) => {
       direction='column'
     >
       <Grid item component='li'>
-        <Link to={`/entertainment/trademark-law`} className={classes.nameLink}>
+        <Link
+          to={`/entertainment/trademark-law`}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/trademark-law' && classes.active
+          )}
+        >
           Trademark Law
         </Link>
       </Grid>
       <Grid item component='li'>
-        <Link to={`/entertainment/art-law`} className={classes.nameLink}>
+        <Link
+          to={`/entertainment/art-law`}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/art-law' && classes.active
+          )}
+        >
           Art Law
         </Link>
       </Grid>
       <Grid item component='li'>
-        <Link to={`/entertainment/fashion-law`} className={classes.nameLink}>
+        <Link
+          to={`/entertainment/fashion-law`}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/fashion-law' && classes.active
+          )}
+        >
           Fashion Law
         </Link>
       </Grid>
       <Grid item component='li'>
-        <Link to={`/entertainment/film-financing`} className={classes.nameLink}>
+        <Link
+          to={`/entertainment/film-financing`}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/film-financing' && classes.active
+          )}
+        >
           Film Financing
         </Link>
       </Grid>
       <Grid item component='li'>
-        <Link to={`/entertainment/music-law`} className={classes.nameLink}>
+        <Link
+          to={`/entertainment/music-law`}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/music-law' && classes.active
+          )}
+        >
           Music Law
         </Link>
       </Grid>
       <Grid item component='li'>
         <Link
           to={`/entertainment/sports-law-attorney`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/entertainment/sports-law-attorney' && classes.active
+          )}
         >
           Sports Law
         </Link>

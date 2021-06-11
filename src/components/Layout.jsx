@@ -9,7 +9,7 @@ import Navigation from './Navigation'
 import { Hidden } from '@material-ui/core'
 import Footer from './Footer'
 
-const Layout = ({ title, description, children }) => {
+const Layout = ({ title, description, location, children }) => {
   return (
     <>
       <HtmlHead title={title} description={description} />
@@ -19,7 +19,7 @@ const Layout = ({ title, description, children }) => {
           <StickyCTA />
         </Hidden>
         <LogoHeader />
-        <Navigation />
+        <Navigation location={location} />
         <main>{children}</main>
         <Footer />
       </ThemeProvider>

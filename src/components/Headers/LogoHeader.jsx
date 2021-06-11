@@ -10,12 +10,18 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     [theme.breakpoints.down('sm')]: {
       padding: '10rem 0 6rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '8rem 0 4.5rem'
     }
   },
   logo: {
     width: '20rem',
     [theme.breakpoints.down('sm')]: {
       width: '18rem'
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '13rem'
     }
   }
 }))

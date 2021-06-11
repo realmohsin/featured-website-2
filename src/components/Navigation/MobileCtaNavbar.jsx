@@ -17,18 +17,25 @@ const useStyles = makeStyles(theme => ({
     position: 'fixed',
     top: 0,
     boxShadow: theme.shadows[3],
-    zIndex: 10
+    zIndex: 10,
+    [theme.breakpoints.down('xs')]: {
+      padding: '0.5rem 0.9rem 0.5rem 0.5rem'
+    }
   },
   ctaButton: {
     backgroundColor: 'transparent',
     color: 'white',
-    border: `2px solid ${theme.palette.secondary.main}`,
-    borderRadius: '1rem',
+    border: `1px solid ${theme.palette.secondary.main}`,
+    borderRadius: '0.5rem',
     padding: '0.75rem 1.5rem',
     transition: '0.3s all',
     '&:hover': {
       color: theme.palette.secondary.main,
       backgroundColor: theme.palette.primary.main
+    },
+    [theme.breakpoints.down('xs')]: {
+      padding: '0.5rem 1.6rem',
+      fontSize: '1.3rem'
     }
   },
   callButton: {

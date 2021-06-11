@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     transform: 'translateY(50px)',
     transition: 'all 0.3s',
     width: '23rem',
-    height: '35rem', // 4.75rem each
+    height: '32rem', // 4.75rem each
     backgroundColor: theme.palette.primary.dark,
     boxShadow: theme.shadows[5],
     '& > li': {
@@ -27,16 +27,20 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     paddingLeft: '2rem',
     transition: 'all 0.1s',
+    fontSize: '1.3rem',
     '&:hover': {
       backgroundColor: theme.palette.primary.light
     }
   },
   inSideDrawer: {
     ...theme.custom.inSideDrawer
+  },
+  active: {
+    backgroundColor: theme.palette.primary.light
   }
 }))
 
-const DisputeDropdown = ({ inSideDrawer }) => {
+const DisputeDropdown = ({ inSideDrawer, pathname }) => {
   const classes = useStyles()
   return (
     <Grid
@@ -51,7 +55,10 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/arbitration`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/arbitration' && classes.active
+          )}
         >
           Arbitration
         </Link>
@@ -59,7 +66,11 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/breach-of-contract`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/breach-of-contract' &&
+              classes.active
+          )}
         >
           Breach of Contract
         </Link>
@@ -67,7 +78,11 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/copyright-infringement`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/copyright-infringement' &&
+              classes.active
+          )}
         >
           Copyright Infringement
         </Link>
@@ -75,7 +90,10 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/debt-collection`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/debt-collection' && classes.active
+          )}
         >
           Debt Collection
         </Link>
@@ -83,7 +101,11 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/trademark-infringement`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/trademark-infringement' &&
+              classes.active
+          )}
         >
           Trademark Infringement
         </Link>
@@ -91,7 +113,11 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/defamation-attorney-nyc`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/defamation-attorney-nyc' &&
+              classes.active
+          )}
         >
           Defamation
         </Link>
@@ -99,7 +125,10 @@ const DisputeDropdown = ({ inSideDrawer }) => {
       <Grid item component='li'>
         <Link
           to={`/business-disputes/business-torts`}
-          className={classes.nameLink}
+          className={clsx(
+            classes.nameLink,
+            pathname === '/business-disputes/business-torts' && classes.active
+          )}
         >
           Business Torts
         </Link>

@@ -49,8 +49,10 @@ const useStyles = makeStyles(theme => ({
       position: 'static',
       transform: 'translate(0, 0)',
       padding: '5rem 4rem 5rem',
-      fontSize: '1.6rem',
-      lineHeight: 1.4
+      '& p': {
+        fontSize: '1.5rem',
+        lineHeight: 1.6
+      }
     }
   },
   mainTitle: {
@@ -115,7 +117,8 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const InnerPageTemplate = ({
-  data: { contentfulRomanoInnerPage: innerPageData }
+  data: { contentfulRomanoInnerPage: innerPageData },
+  location
 }) => {
   const classes = useStyles()
   const image = getImage(innerPageData.heroImage)
@@ -145,7 +148,7 @@ const InnerPageTemplate = ({
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <section className={classes.heroSection}>
         <div className={classes.imageContainer}>
           <GatsbyImage

@@ -5,7 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 
 const useStyles = makeStyles(theme => ({
   heroSection: {
-    marginTop: '-2.2rem',
+    marginTop: '-2rem',
     position: 'relative',
     // height: '74rem',
     height: '63rem',

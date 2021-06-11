@@ -9,16 +9,19 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     backgroundColor: theme.palette.primary.dark,
     width: '100%',
-    padding: '0.95rem',
+    padding: '0.8rem',
     position: 'fixed',
     boxShadow: theme.shadows[6],
-    zIndex: 10
+    zIndex: 10,
+    [theme.breakpoints.down('xs')]: {
+      padding: '0.5rem'
+    }
   },
   stickyCtaText: {
     textTransform: 'uppercase',
     color: 'white',
-    fontSize: '1.6rem',
-    letterSpacing: '1px',
+    fontSize: '1.45rem',
+    letterSpacing: '1.2px',
     fontWeight: 'normal'
   },
   ctaButton: {
@@ -26,7 +29,7 @@ const useStyles = makeStyles(theme => ({
     color: 'white',
     border: `2px solid ${theme.palette.secondary.main}`,
     borderRadius: '1rem',
-    padding: '0.75rem 1.5rem',
+    padding: '0.6rem 1.5rem',
     transition: '0.3s all',
     '&:hover': {
       color: theme.palette.secondary.main,

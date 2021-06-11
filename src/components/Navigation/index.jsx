@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import MobileCtaNavbar from './MobileCtaNavbar'
 import SideDrawer from './SideDrawer/index.jsx'
 
-const Navigation = props => {
+const Navigation = ({ location }) => {
   const [showingSideDrawer, setShowingSideDrawer] = useState(false)
 
   useEffect(() => {
@@ -24,13 +24,14 @@ const Navigation = props => {
   return (
     <>
       <Hidden smDown>
-        <Navbar />
+        <Navbar location={location} />
       </Hidden>
       <Hidden mdUp>
         <MobileCtaNavbar toggleSideDrawer={toggleSideDrawer} />
         <SideDrawer
           showing={showingSideDrawer}
           closeSideDrawer={closeSideDrawer}
+          location={location}
         />
       </Hidden>
     </>

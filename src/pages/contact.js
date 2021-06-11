@@ -4,9 +4,9 @@ import ContactHero from '../components/ContactPage/ContactHero'
 import ContactForm from '../components/ContactForm'
 import ContactInfo from '../components/ContactPage/ContactInfo'
 
-export default function Careers () {
+export default function Careers ({ location }) {
   return (
-    <Layout>
+    <Layout location={location}>
       <ContactHero />
       <ContactInfo />
       <ContactForm />

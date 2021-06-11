@@ -87,7 +87,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const SideDrawer = ({ showing, closeSideDrawer }) => {
+const SideDrawer = ({ showing, closeSideDrawer, location }) => {
   const classes = useStyles()
 
   const initialMenuState = {
@@ -144,7 +144,7 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
               {menuState.menu1 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu1} timeout='auto' unmountOnExit>
-              <BusinessDropdown inSideDrawer />
+              <BusinessDropdown inSideDrawer pathname={location.pathname} />
             </Collapse>
 
             <li
@@ -155,7 +155,10 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
               {menuState.menu2 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu2} timeout='auto' unmountOnExit>
-              <EntertainmentDropdown inSideDrawer />
+              <EntertainmentDropdown
+                inSideDrawer
+                pathname={location.pathname}
+              />
             </Collapse>
 
             <li
@@ -166,7 +169,7 @@ const SideDrawer = ({ showing, closeSideDrawer }) => {
               {menuState.menu3 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu3} timeout='auto' unmountOnExit>
-              <DisputeDropdown inSideDrawer />
+              <DisputeDropdown inSideDrawer pathname={location.pathname} />
             </Collapse>
 
             {/* <li>

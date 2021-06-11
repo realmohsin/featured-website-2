@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import clsx from 'clsx'
 import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
@@ -10,9 +10,9 @@ import DisputeDropdown from './NavLinks/DisputeDropdown'
 const useStyles = makeStyles(theme => ({
   navContainer: {
     position: 'sticky',
-    top: 59,
+    top: 53,
     zIndex: 10,
-    marginTop: '-3.2rem'
+    marginTop: '-3.8rem'
   },
   navbar: {
     zIndex: 1,
@@ -52,6 +52,14 @@ const useStyles = makeStyles(theme => ({
       }
     }
   },
+  active: {
+    '& > div': {
+      backgroundColor: theme.palette.primary.light
+    },
+    '& > a': {
+      backgroundColor: theme.palette.primary.light
+    }
+  },
   entertainmentLawItem: {
     flex: 1.3
   },
@@ -60,19 +68,22 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'center',
     alignItems: 'center',
     textAlign: 'center',
-    padding: '1rem 0',
+    padding: '0.75rem 0',
     height: '100%',
     color: theme.palette.secondary.main,
     borderRight: `2px solid ${theme.palette.secondary.dark}`,
-    transition: 'color 0.3s'
+    transition: 'color 0.3s',
+    fontSize: '1.3rem'
   },
   lastNavLink: {
     borderRight: 'none'
   }
 }))
 
-const Navbar = props => {
+const Navbar = ({ location }) => {
   const classes = useStyles()
+
+  const [pathname, setPathname] = useState(location.pathname)
 
   return (
     <Container component='header' className={classes.navContainer}>
@@ -83,34 +94,60 @@ const Navbar = props => {
               Home
             </Link>
           </li>
-          <li className={classes.navItem}>
+          <li
+            className={clsx(
+              classes.navItem,
+              pathname === '/about' && classes.active
+            )}
+          >
             <Link to={`/about`} className={classes.navLink}>
               About
             </Link>
           </li>
-          <li className={classes.navItem}>
+          <li
+            className={clsx(
+              classes.navItem,
+              pathname.startsWith('/business/') && classes.active
+            )}
+          >
             <div className={classes.navLink}>Business Law</div>
-            <BusinessDropdown />
+            <BusinessDropdown pathname={pathname} />
           </li>
-          <li className={clsx(classes.navItem, classes.entertainmentLawItem)}>
+          <li
+            className={clsx(
+              classes.navItem,
+              classes.entertainmentLawItem,
+              pathname.startsWith('/entertainment/') && classes.active
+            )}
+          >
             <div className={classes.navLink}>Entertainment Law</div>
-            <EntertainmentDropdown />
+            <EntertainmentDropdown pathname={pathname} />
           </li>
-          <li className={classes.navItem}>
+          <li
+            className={clsx(
+              classes.navItem,
+              pathname.startsWith('/business-disputes/') && classes.active
+            )}
+          >
             <div className={classes.navLink}>Disputes</div>
-            <DisputeDropdown />
+            <DisputeDropdown pathname={pathname} />
           </li>
-          {/* <li className={classes.navItem}>
-            <Link to={`/blog`} className={classes.navLink}>
-              Blog
-            </Link>
-          </li> */}
-          <li className={classes.navItem}>
+          <li
+            className={clsx(
+              classes.navItem,
+              pathname === '/careers' && classes.active
+            )}
+          >
             <Link to={`/careers`} className={classes.navLink}>
               Careers
             </Link>
           </li>
-          <li className={classes.navItem}>
+          <li
+            className={clsx(
+              classes.navItem,
+              pathname === '/contact' && classes.active
+            )}
+          >
             <Link to={`/contact`} className={classes.navLink}>
               Contact
             </Link>
@@ -122,187 +159,3 @@ const Navbar = props => {
 }
 
 export default Navbar
-
-// import React, { useState, useRef, useEffect } from 'react'
-// import { useStaticQuery, graphql } from 'gatsby'
-// import { makeStyles, Box, Container, Grid, Hidden } from '@material-ui/core'
-// import AniLink from 'gatsby-plugin-transition-link/AniLink'
-// import throttle from 'lodash/throttle'
-// import Toggle from './Toggle'
-// // import NameDropdown from './NavLinks/NameDropdown'
-// // import FaceEyesDropdown from './NavLinks/FaceEyesDropdown'
-// // import BodyDropdown from './NavLinks/BodyDropdown'
-// // import InjectablesDropdown from './NavLinks/InjectablesDropdown'
-// // import LaserDropdown from './NavLinks/LaserDropdown'
-// // import HairDropdown from './NavLinks/HairDropdown'
-// // import PhotosDropdown from './NavLinks/PhotosDropdown'
-// // import ContactDropdown from './NavLinks/ContactDropdown'
-// import BusinessDropdown from './NavLinks/BusinessDropdown.jsx'
-// import DisputeDropdown from './NavLinks/DisputeDropdown.jsx'
-// import EntertainmentDropdown from './NavLinks/EntertainmentDropdown.jsx'
-
-// const useStyles = makeStyles(theme => ({
-//   navContainer: {
-//     position: 'sticky',
-//     top: 50,
-//     zIndex: 10
-//   },
-//   navbar: {
-//     zIndex: '1',
-//     boxShadow: theme.shadows[2],
-//     backgroundColor: theme.palette.primary.main,
-//     borderRadius: 15,
-//     border: `1px solid ${theme.palette.primary.main}`
-//   },
-//   mainNavUl: {
-//     display: 'flex'
-//   },
-//   topNavLi: {
-//     flex: 1,
-//     display: 'flex',
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     position: 'relative',
-//     '& > a': {
-//       ...theme.custom.navLinkText,
-//       padding: '1rem 0',
-//       backgroundColor: 'white',
-//       width: '100%',
-//       textAlign: 'center',
-//       borderRight: `1px solid ${theme.palette.primary.main}`
-//     },
-//     '&:first-of-type > a': {
-//       borderTopLeftRadius: 13,
-//       borderBottomLeftRadius: 13
-//     },
-//     '&:last-of-type > a': {
-//       borderRight: 'none',
-//       borderBottomRightRadius: 13,
-//       borderTopRightRadius: 13
-//     },
-//     '&:hover > a': {
-//       backgroundColor: theme.palette.common.navHoverColor,
-//       color: 'white'
-//     },
-//     '&:hover > ul': {
-//       transform: 'translateY(0)',
-//       opacity: 1,
-//       pointerEvents: 'auto'
-//     }
-//   },
-//   topNavLink: {
-//     '& + ul': {
-//       position: 'absolute',
-//       top: '102%',
-//       left: -1
-//     }
-//   },
-//   topNavLinkFaceEyes: {
-//     '& +ul': {
-//       position: 'absolute',
-//       top: '102%',
-//       left: '-111%',
-//       [theme.breakpoints.down('lg')]: {
-//         left: '-125%'
-//       },
-//       '@media (max-width:1095px)': {
-//         left: '-202%'
-//       }
-//     }
-//   },
-//   topNavLinkHair: {
-//     '& + ul': {
-//       position: 'absolute',
-//       top: '102%',
-//       left: -1,
-//       [theme.breakpoints.down('lg')]: {
-//         left: '-10%'
-//       }
-//     }
-//   },
-//   topNavLinkPhotos: {
-//     '& + ul': {
-//       position: 'absolute',
-//       top: '102%',
-//       right: '-100%'
-//     }
-//   },
-//   topNavLinkContact: {
-//     '& + ul': {
-//       position: 'absolute',
-//       top: '102%',
-//       right: '-11%'
-//     }
-//   }
-// }))
-
-// const Navbar = () => {
-//   const classes = useStyles()
-//   const navRef = useRef(null)
-
-//   useEffect(() => {
-//     const element = document.querySelector('.tl-edges')
-//     element.style.overflowX = 'visible'
-//   }, [])
-
-//   return (
-//     <Container className={classes.navContainer}>
-//       <nav ref={navRef} className={classes.navbar}>
-//         <ul className={classes.mainNavUl}>
-//           <li className={classes.topNavLi}>
-//             <AniLink cover bg='#663399' to={`/`}>
-//               Home
-//             </AniLink>
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/about`}>
-//               About
-//             </AniLink>
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/`} className={classes.topNavLink}>
-//               Business Law
-//             </AniLink>
-//             <BusinessDropdown />
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/`} className={classes.topNavLink}>
-//               Entertainment Law
-//             </AniLink>
-//             <EntertainmentDropdown />
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/`} className={classes.topNavLink}>
-//               Business Disputes
-//             </AniLink>
-//             <DisputeDropdown />
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/blog`}>
-//               Blog
-//             </AniLink>
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/careers`}>
-//               Careers
-//             </AniLink>
-//           </li>
-
-//           <li className={classes.topNavLi}>
-//             <AniLink fade duration={1} to={`/contact`}>
-//               Contact
-//             </AniLink>
-//           </li>
-//         </ul>
-//       </nav>
-//     </Container>
-//   )
-// }
-
-// export default Navbar
