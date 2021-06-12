@@ -7,6 +7,21 @@ import SideDrawer from './SideDrawer/index.jsx'
 const Navigation = ({ location }) => {
   const [showingSideDrawer, setShowingSideDrawer] = useState(false)
 
+  // menu1 is /business/
+  // menu2 is /entertainment/
+  // menu3 is /business-disputes/
+  const initialMenuState = {
+    menu1: location.pathname.startsWith('/business/') ? true : false,
+    menu2: location.pathname.startsWith('/entertainment/') ? true : false,
+    menu3: location.pathname.startsWith('/business-disputes/') ? true : false
+  }
+
+  const [menuState, setMenuState] = React.useState(initialMenuState)
+
+  const handleDropdownMenuClick = menuName => {
+    setMenuState({ ...menuState, [menuName]: !menuState[menuName] })
+  }
+
   useEffect(() => {
     if (showingSideDrawer) {
       document.body.style.position = 'fixed'
@@ -16,6 +31,8 @@ const Navigation = ({ location }) => {
   }, [showingSideDrawer])
 
   const toggleSideDrawer = () => {
+    // reset menu state to initial so sidedrawer opens to submenu showing
+    setMenuState(initialMenuState)
     setShowingSideDrawer(showingSideDrawer => !showingSideDrawer)
   }
 
@@ -31,6 +48,8 @@ const Navigation = ({ location }) => {
         <SideDrawer
           showing={showingSideDrawer}
           closeSideDrawer={closeSideDrawer}
+          menuState={menuState}
+          handleDropdownMenuClick={handleDropdownMenuClick}
           location={location}
         />
       </Hidden>

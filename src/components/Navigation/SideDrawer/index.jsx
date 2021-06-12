@@ -93,24 +93,31 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const SideDrawer = ({ showing, closeSideDrawer, location }) => {
+const SideDrawer = ({
+  showing,
+  closeSideDrawer,
+  location,
+  menuState,
+  handleDropdownMenuClick
+}) => {
   const classes = useStyles()
 
-  const initialMenuState = {
-    menu1: false,
-    menu2: false,
-    menu3: false
-  }
+  const pathname = location.pathname
 
-  const [menuState, setMenuState] = React.useState(initialMenuState)
+  // menu1 is /business/
+  // menu2 is /entertainment/
+  // menu3 is /business-disputes/
 
-  const handleMenuClick = menuName => {
-    setMenuState({ ...menuState, [menuName]: !menuState[menuName] })
-  }
+  // const initialMenuState = {
+  //   menu1: pathname.startsWith('/business/') ? true : false,
+  //   menu2: pathname.startsWith('/entertainment/') ? true : false,
+  //   menu3: pathname.startsWith('/business-disputes/') ? true : false
+  // }
 
-  // const handleSubMenuClick = (e, menuName, subMenuName) => {
-  //   e.stopPropagation()
-  //   handleMenuClick(menuName, subMenuName)
+  // const [menuState, setMenuState] = React.useState(initialMenuState)
+
+  // const handleMenuClick = menuName => {
+  //   setMenuState({ ...menuState, [menuName]: !menuState[menuName] })
   // }
 
   const sideDrawerClasses = [classes.sideDrawer]
@@ -151,39 +158,36 @@ const SideDrawer = ({ showing, closeSideDrawer, location }) => {
             </li>
 
             <li
-              onClick={() => handleMenuClick('menu1')}
+              onClick={() => handleDropdownMenuClick('menu1')}
               className={classes.link}
             >
               Business Law
               {menuState.menu1 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu1} timeout='auto' unmountOnExit>
-              <BusinessDropdown inSideDrawer pathname={location.pathname} />
+              <BusinessDropdown inSideDrawer pathname={pathname} />
             </Collapse>
 
             <li
-              onClick={() => handleMenuClick('menu2')}
+              onClick={() => handleDropdownMenuClick('menu2')}
               className={classes.link}
             >
               Entertainment Law
               {menuState.menu2 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu2} timeout='auto' unmountOnExit>
-              <EntertainmentDropdown
-                inSideDrawer
-                pathname={location.pathname}
-              />
+              <EntertainmentDropdown inSideDrawer pathname={pathname} />
             </Collapse>
 
             <li
-              onClick={() => handleMenuClick('menu3')}
+              onClick={() => handleDropdownMenuClick('menu3')}
               className={classes.link}
             >
               Disputes
               {menuState.menu3 ? <FaAngleUp /> : <FaAngleDown />}
             </li>
             <Collapse in={menuState.menu3} timeout='auto' unmountOnExit>
-              <DisputeDropdown inSideDrawer pathname={location.pathname} />
+              <DisputeDropdown inSideDrawer pathname={pathname} />
             </Collapse>
 
             <li>

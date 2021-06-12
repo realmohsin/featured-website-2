@@ -48,7 +48,7 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       position: 'static',
       transform: 'translate(0, 0)',
-      padding: '5rem 4rem 5rem',
+      padding: '3rem 4rem 5rem',
       '& p': {
         fontSize: '1.5rem',
         lineHeight: 1.6
