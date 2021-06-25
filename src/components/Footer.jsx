@@ -17,13 +17,6 @@ const useStyles = makeStyles(theme => ({
     textTransform: 'uppercase',
     color: theme.palette.common.goldVariant1,
     position: 'relative',
-    '& > .gatsby-image-wrapper-constrained': {
-      position: 'absolute',
-      top: 0,
-      bottom: 0,
-      right: 0,
-      left: 0
-    },
     [theme.breakpoints.down('xs')]: {
       textAlign: 'center',
       padding: '8rem 0 6rem'
@@ -100,7 +93,15 @@ const useStyles = makeStyles(theme => ({
     fontSize: '1.2rem'
   },
   darkBg: {
-    zIndex: -10
+    position: 'absolute !important',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    zIndex: -10,
+    '& img': {
+      objectFit: 'cover'
+    }
   },
   copyright: {
     marginTop: '10rem',

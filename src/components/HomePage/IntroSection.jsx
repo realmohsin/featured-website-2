@@ -128,17 +128,18 @@ const useStyles = makeStyles(theme => ({
   aboutSection: {
     padding: '3rem 0 12rem',
     background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.1) 100%)`,
-    position: 'relative',
-    '& > .gatsby-image-wrapper-constrained': {
-      position: 'absolute',
-      top: 0,
-      bottom: 0,
-      right: 0,
-      left: 0
-    }
+    position: 'relative'
   },
   lightBg: {
-    zIndex: -10
+    position: 'absolute !important',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    zIndex: -10,
+    '& img': {
+      objectFit: 'cover'
+    }
   },
   symbolDivider: {
     width: '3.5rem',

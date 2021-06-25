@@ -10,13 +10,6 @@ const useStyles = makeStyles(theme => ({
     padding: '12rem 0',
     background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.4) 100%)`,
     position: 'relative',
-    '& .gatsby-image-wrapper-constrained': {
-      position: 'absolute',
-      top: 0,
-      bottom: 0,
-      right: 0,
-      left: 0
-    },
     [theme.breakpoints.down('xs')]: {
       padding: '8rem 0'
     }
@@ -56,7 +49,15 @@ const useStyles = makeStyles(theme => ({
     }
   },
   lightBg: {
-    zIndex: -10
+    position: 'absolute !important',
+    top: 0,
+    bottom: 0,
+    right: 0,
+    left: 0,
+    zIndex: -10,
+    '& img': {
+      objectFit: 'cover'
+    }
   }
 }))
 
