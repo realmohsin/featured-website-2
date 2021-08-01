@@ -135,7 +135,19 @@ const SideDrawer = ({
   return (
     <>
       <CSSTransition in={showing} unmountOnExit classNames='fade' timeout={500}>
-        <div className={classes.backdrop} onClick={closeSideDrawer} />
+        <div 
+          className={classes.backdrop} 
+          onClick={closeSideDrawer}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault()
+              closeSideDrawer()
+            }
+          }}
+          role="button"
+          tabIndex={0}
+          aria-label="Close side drawer"
+        />
       </CSSTransition>
 
       <div className={sideDrawerClasses.join(' ')}>
@@ -157,35 +169,62 @@ const SideDrawer = ({
               </Link>
             </li>
 
-            <li
+            <div
               onClick={() => handleDropdownMenuClick('menu1')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  handleDropdownMenuClick('menu1')
+                }
+              }}
               className={classes.link}
+              role="button"
+              tabIndex={0}
+              aria-expanded={menuState.menu1}
             >
               Business Law
               {menuState.menu1 ? <FaAngleUp /> : <FaAngleDown />}
-            </li>
+            </div>
             <Collapse in={menuState.menu1} timeout='auto' unmountOnExit>
               <BusinessDropdown inSideDrawer pathname={pathname} />
             </Collapse>
 
-            <li
+            <div
               onClick={() => handleDropdownMenuClick('menu2')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  handleDropdownMenuClick('menu2')
+                }
+              }}
               className={classes.link}
+              role="button"
+              tabIndex={0}
+              aria-expanded={menuState.menu2}
             >
               Entertainment Law
               {menuState.menu2 ? <FaAngleUp /> : <FaAngleDown />}
-            </li>
+            </div>
             <Collapse in={menuState.menu2} timeout='auto' unmountOnExit>
               <EntertainmentDropdown inSideDrawer pathname={pathname} />
             </Collapse>
 
-            <li
+            <div
               onClick={() => handleDropdownMenuClick('menu3')}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  e.preventDefault()
+                  handleDropdownMenuClick('menu3')
+                }
+              }}
               className={classes.link}
+              role="button"
+              tabIndex={0}
+              aria-expanded={menuState.menu3}
             >
               Disputes
               {menuState.menu3 ? <FaAngleUp /> : <FaAngleDown />}
-            </li>
+            </div>
             <Collapse in={menuState.menu3} timeout='auto' unmountOnExit>
               <DisputeDropdown inSideDrawer pathname={pathname} />
             </Collapse>

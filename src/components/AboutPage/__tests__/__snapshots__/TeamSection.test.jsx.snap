@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TeamSection Component renders team section with all members 1`] = `
+<section
+  class="makeStyles-teamSection-1"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h2
+      class="makeStyles-teamSectionTitle-2"
+    >
+      Legal Team
+    </h2>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root makeStyles-gridItem-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <figure>
+          <img
+            alt="Business Law"
+            src="/mock-team-image.jpg"
+          />
+          <figcaption>
+            <p
+              class="MuiTypography-root makeStyles-name-4 MuiTypography-body1"
+            >
+              Domenic Romano
+            </p>
+            <p
+              class="MuiTypography-root makeStyles-title-5 MuiTypography-body1"
+            >
+              Managing Partner
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-gridItem-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <figure>
+          <img
+            alt="Business Law"
+            src="/mock-team-image.jpg"
+          />
+          <figcaption>
+            <p
+              class="MuiTypography-root makeStyles-name-4 MuiTypography-body1"
+            >
+              Sarah Johnson
+            </p>
+            <p
+              class="MuiTypography-root makeStyles-title-5 MuiTypography-body1"
+            >
+              Senior Associate
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-gridItem-3 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+      >
+        <figure>
+          <img
+            alt="Business Law"
+            src="/mock-team-image.jpg"
+          />
+          <figcaption>
+            <p
+              class="MuiTypography-root makeStyles-name-4 MuiTypography-body1"
+            >
+              Michael Chen
+            </p>
+            <p
+              class="MuiTypography-root makeStyles-title-5 MuiTypography-body1"
+            >
+              Legal Counsel
+            </p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+`;

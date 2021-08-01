@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeaturedOnSection matches snapshot 1`] = `
+<div>
+  <section
+    class="makeStyles-featuredOnSection-28"
+  >
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <div
+        class="makeStyles-divider-33"
+      />
+      <h2
+        class="makeStyles-featuredOnTitle-29"
+      >
+        Featured On
+      </h2>
+      <div
+        class="makeStyles-featuredGrid-30"
+      >
+        <div
+          class="makeStyles-gridItem-31"
+        >
+          <img
+            alt="Featured In"
+            class="makeStyles-featuredCompanyImg-32"
+            data-testid="gatsby-image"
+            image="[object Object]"
+          />
+        </div>
+        <div
+          class="makeStyles-gridItem-31"
+        >
+          <img
+            alt="Featured In"
+            class="makeStyles-featuredCompanyImg-32"
+            data-testid="gatsby-image"
+            image="[object Object]"
+          />
+        </div>
+        <div
+          class="makeStyles-gridItem-31"
+        >
+          <img
+            alt="Featured In"
+            class="makeStyles-featuredCompanyImg-32"
+            data-testid="gatsby-image"
+            image="[object Object]"
+          />
+        </div>
+      </div>
+      <div
+        class="makeStyles-divider-33 makeStyles-bottomDivider-34"
+      />
+      <h2
+        class="makeStyles-featuredOnTitle-29"
+      >
+        Recognition
+      </h2>
+      <div
+        class="makeStyles-recognitionGrid-35"
+      >
+        <div
+          class="makeStyles-gridItem-31"
+        >
+          <img
+            alt="Recognition Award"
+            class="makeStyles-featuredCompanyImg-32"
+            data-testid="gatsby-image"
+            image="[object Object]"
+          />
+        </div>
+        <div
+          class="makeStyles-gridItem-31"
+        >
+          <img
+            alt="Recognition Award"
+            class="makeStyles-featuredCompanyImg-32"
+            data-testid="gatsby-image"
+            image="[object Object]"
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

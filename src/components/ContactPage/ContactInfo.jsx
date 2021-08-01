@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
 import { Container, Grid, Typography } from '@material-ui/core'
 import { FaPhone } from 'react-icons/fa'
 
@@ -195,7 +194,7 @@ const ContactSection = props => {
             <Typography variant='body1' className={classes.timesAndAddress}>
               9:00AM - 7:00PM
             </Typography>
-            <a className={classes.telephoneNumber}>
+            <a href="tel:+12128659848" className={classes.telephoneNumber}>
               <FaPhone
                 color={theme.palette.secondary.main}
                 className={classes.phoneIcon}

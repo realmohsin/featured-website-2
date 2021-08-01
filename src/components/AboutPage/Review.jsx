@@ -61,6 +61,13 @@ const Review = ({ review }) => {
     setOpened(opened => !opened)
   }
 
+  const handleKeyDown = e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      toggleOpen(e)
+    }
+  }
+
   return (
     <Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
       <Typography variant='body1' className={classes.nameAndDate}>
@@ -70,8 +77,9 @@ const Review = ({ review }) => {
       <div className={classes.starsContainer}>
         {Array(5)
           .fill(null)
-          .map(() => (
+          .map((_, index) => (
             <FaStar
+              key={index}
               className={classes.star}
               size='1.2em'
               color={
@@ -99,7 +107,13 @@ const Review = ({ review }) => {
         <Typography variant='body2' className={classes.text}>
           {opened ? review.content : review.content.slice(0, 201)}
           {!opened && '...'} &nbsp;
-          <span className={classes.readMoreOrLess} onClick={toggleOpen}>
+          <span 
+            className={classes.readMoreOrLess} 
+            onClick={toggleOpen}
+            onKeyDown={handleKeyDown}
+            role="button"
+            tabIndex={0}
+          >
             Read {opened ? 'Less' : 'More'}
           </span>
         </Typography>

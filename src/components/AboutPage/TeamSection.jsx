@@ -66,7 +66,7 @@ const TeamSection = props => {
         <h2 className={classes.teamSectionTitle}>Legal Team</h2>
         <Grid container>
           {teamMembers.map(({ id, name, title }, i) => (
-            <Grid item xs={12} sm={6} md={4} className={classes.gridItem}>
+            <Grid key={id} item xs={12} sm={6} md={4} className={classes.gridItem}>
               <figure>
                 <GatsbyImage
                   image={getImage(data.allFile.nodes[i].childImageSharp)}
@@ -75,14 +75,12 @@ const TeamSection = props => {
                 <figcaption>
                   <Typography
                     variant='body1'
-                    marginBottom
                     className={classes.name}
                   >
                     {name}
                   </Typography>
                   <Typography
                     variant='body1'
-                    marginBottom
                     className={classes.title}
                   >
                     {title}

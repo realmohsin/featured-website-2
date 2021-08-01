@@ -135,7 +135,6 @@ const theme = createMuiTheme({
         borderBottom: `1px solid #eee`,
         alignItems: 'center',
         justifyContent: 'space-between',
-        paddingLeft: '1rem',
         paddingRight: '1rem',
         fontWeight: 'normal',
         paddingLeft: '3.6rem'

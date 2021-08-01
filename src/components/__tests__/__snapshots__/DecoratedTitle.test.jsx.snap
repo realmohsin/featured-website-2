@@ -1,0 +1,86 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DecoratedTitle Component renders with all props combined 1`] = `
+<div
+  class="MuiBox-root MuiBox-root-30 makeStyles-sectionTitle-25 combined-class"
+>
+  <h2
+    class="MuiTypography-root makeStyles-title-26 makeStyles-smallerFont-29 MuiTypography-h2 MuiTypography-alignCenter"
+  >
+    All Props Title
+  </h2>
+  <div
+    class="makeStyles-decoration-27 makeStyles-closer-28"
+    data-testid="title-decoration"
+    style="color: rgb(204, 171, 99);"
+  />
+</div>
+`;
+
+exports[`DecoratedTitle Component renders with basic title 1`] = `
+<div
+  class="MuiBox-root MuiBox-root-6 makeStyles-sectionTitle-1"
+>
+  <h2
+    class="MuiTypography-root makeStyles-title-2 MuiTypography-h2 MuiTypography-alignCenter"
+  >
+    Test Title
+  </h2>
+  <div
+    class="makeStyles-decoration-3"
+    data-testid="title-decoration"
+    style="color: rgb(204, 171, 99);"
+  />
+</div>
+`;
+
+exports[`DecoratedTitle Component renders with closer prop 1`] = `
+<div
+  class="MuiBox-root MuiBox-root-12 makeStyles-sectionTitle-7"
+>
+  <h2
+    class="MuiTypography-root makeStyles-title-8 MuiTypography-h2 MuiTypography-alignCenter"
+  >
+    Closer Title
+  </h2>
+  <div
+    class="makeStyles-decoration-9 makeStyles-closer-10"
+    data-testid="title-decoration"
+    style="color: rgb(204, 171, 99);"
+  />
+</div>
+`;
+
+exports[`DecoratedTitle Component renders with custom classStyles 1`] = `
+<div
+  class="MuiBox-root MuiBox-root-24 makeStyles-sectionTitle-19 custom-class"
+>
+  <h2
+    class="MuiTypography-root makeStyles-title-20 MuiTypography-h2 MuiTypography-alignCenter"
+  >
+    Custom Styled Title
+  </h2>
+  <div
+    class="makeStyles-decoration-21"
+    data-testid="title-decoration"
+    style="color: rgb(204, 171, 99);"
+  />
+</div>
+`;
+
+exports[`DecoratedTitle Component renders with smallerFont prop 1`] = `
+<div
+  class="MuiBox-root MuiBox-root-18 makeStyles-sectionTitle-13"
+>
+  <h2
+    class="MuiTypography-root makeStyles-title-14 makeStyles-smallerFont-17 MuiTypography-h2 MuiTypography-alignCenter"
+  >
+    Smaller Font Title
+  </h2>
+  <div
+    class="makeStyles-decoration-15"
+    data-testid="title-decoration"
+    style="color: rgb(204, 171, 99);"
+  />
+</div>
+`;

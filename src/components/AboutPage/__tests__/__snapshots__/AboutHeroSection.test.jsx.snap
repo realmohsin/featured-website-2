@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutHeroSection Component renders hero section with image 1`] = `
+<section
+  class="makeStyles-aboutHeroSection-1"
+>
+  <img
+    alt="Romana Law Lawyers"
+    class="makeStyles-heroImage-2"
+    data-layout="fullWidth"
+    src="/mock-image.jpg"
+  />
+</section>
+`;

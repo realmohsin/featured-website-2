@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input Component renders regular input field 1`] = `
+<div
+  class="makeStyles-inputContainer-1"
+>
+  <input
+    class="makeStyles-input-2"
+    name="firstName"
+    type="text"
+    value=""
+  />
+  <label
+    class="makeStyles-label-3"
+  >
+    First Name
+  </label>
+</div>
+`;
+
+exports[`Input Component renders textarea when isTextarea is true 1`] = `
+<div
+  class="makeStyles-inputContainer-7"
+>
+  <textarea
+    class="makeStyles-input-8 makeStyles-textarea-11"
+    name="message"
+    rows="5"
+  />
+  <label
+    class="makeStyles-label-9 makeStyles-textareaLabel-12"
+  >
+    Message
+  </label>
+</div>
+`;
+
+exports[`Input Component renders with filled value (shrunk label) 1`] = `
+<div
+  class="makeStyles-inputContainer-13"
+>
+  <input
+    class="makeStyles-input-14"
+    name="email"
+    type="email"
+    value="test@example.com"
+  />
+  <label
+    class="makeStyles-label-15 makeStyles-shrunkLabel-16"
+  >
+    Email
+  </label>
+</div>
+`;
+
+exports[`Input Component renders without label 1`] = `
+<div
+  class="makeStyles-inputContainer-19"
+>
+  <input
+    class="makeStyles-input-20"
+    name="noLabel"
+    type="text"
+    value=""
+  />
+</div>
+`;

@@ -1,189 +1,190 @@
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { makeStyles } from '@material-ui/core/styles'
-import { Grid, Typography, Container, Hidden } from '@material-ui/core'
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { makeStyles } from "@material-ui/core/styles";
+import { Grid, Typography, Container, Hidden } from "@material-ui/core";
 import {
   FaFacebook,
   FaTwitter,
   FaYoutube,
   FaLinkedin,
-  FaInstagram
-} from 'react-icons/fa'
-import { Link } from 'gatsby'
+  FaInstagram,
+} from "react-icons/fa";
+import { Link } from "gatsby";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   footer: {
-    padding: '8rem 0 12rem',
-    textTransform: 'uppercase',
+    padding: "8rem 0 12rem",
+    textTransform: "uppercase",
     color: theme.palette.common.goldVariant1,
-    position: 'relative',
-    [theme.breakpoints.down('xs')]: {
-      textAlign: 'center',
-      padding: '8rem 0 6rem'
-    }
+    position: "relative",
+    [theme.breakpoints.down("xs")]: {
+      textAlign: "center",
+      padding: "8rem 0 6rem",
+    },
   },
   leftSide: {
-    padding: '0 5rem',
-    [theme.breakpoints.down('sm')]: {
-      marginBottom: '10rem'
+    padding: "0 5rem",
+    [theme.breakpoints.down("sm")]: {
+      marginBottom: "10rem",
     },
-    [theme.breakpoints.down('xs')]: {
-      marginBottom: '3rem'
-    }
+    [theme.breakpoints.down("xs")]: {
+      marginBottom: "3rem",
+    },
   },
   middleSide: {
-    padding: '0 6rem'
+    padding: "0 6rem",
   },
   rightSide: {
-    padding: '0 4rem'
+    padding: "0 4rem",
   },
   addressTitle: {
-    marginBottom: '1rem'
+    marginBottom: "1rem",
   },
   address: {
-    marginBottom: '3rem'
+    marginBottom: "3rem",
   },
   joinOurTeam: {
-    marginBottom: '6rem'
+    marginBottom: "6rem",
   },
   socialIconsTitle: {
-    marginBottom: '2rem',
-    [theme.breakpoints.down('xs')]: {
-      marginTop: '7rem'
-    }
+    marginBottom: "2rem",
+    [theme.breakpoints.down("xs")]: {
+      marginTop: "7rem",
+    },
   },
   socialIconsContainer: {
-    width: '24rem',
-    display: 'flex',
-    paddingRight: '5rem',
-    justifyContent: 'space-between',
-    [theme.breakpoints.down('xs')]: {
-      margin: '0rem auto 5rem',
-      paddingRight: 0
-    }
+    width: "24rem",
+    display: "flex",
+    paddingRight: "5rem",
+    justifyContent: "space-between",
+    [theme.breakpoints.down("xs")]: {
+      margin: "0rem auto 5rem",
+      paddingRight: 0,
+    },
   },
   contactMessage: {
-    marginBottom: '3rem',
-    width: '24rem',
-    [theme.breakpoints.down('xs')]: {
-      width: 'auto'
-    }
+    marginBottom: "3rem",
+    width: "24rem",
+    [theme.breakpoints.down("xs")]: {
+      width: "auto",
+    },
   },
   telephoneLink: {
-    width: '22rem',
+    width: "22rem",
     border: `2px solid ${theme.palette.common.goldVariant1}`,
-    padding: '0.8rem 0rem',
-    textAlign: 'center',
-    marginBottom: '5rem',
-    transition: 'all 0.3s',
-    '&:hover': {
-      backgroundColor: theme.palette.primary.main
+    padding: "0.8rem 0rem",
+    textAlign: "center",
+    marginBottom: "5rem",
+    transition: "all 0.3s",
+    "&:hover": {
+      backgroundColor: theme.palette.primary.main,
     },
-    [theme.breakpoints.down('xs')]: {
-      margin: '0 auto 5rem'
-    }
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 auto 5rem",
+    },
   },
   helpLink: {
-    marginBottom: '3rem',
-    textDecoration: 'underline',
-    fontSize: '0.95em'
+    marginBottom: "3rem",
+    textDecoration: "underline",
+    fontSize: "0.95em",
   },
   blurb: {
-    marginBottom: '3rem',
-    fontSize: '1.2rem'
+    marginBottom: "3rem",
+    fontSize: "1.2rem",
   },
   darkBg: {
-    position: 'absolute !important',
+    position: "absolute !important",
     top: 0,
     bottom: 0,
     right: 0,
     left: 0,
     zIndex: -10,
-    '& img': {
-      objectFit: 'cover'
-    }
+    "& img": {
+      objectFit: "cover",
+    },
   },
   copyright: {
-    marginTop: '10rem',
-    fontSize: '1.5rem',
-    [theme.breakpoints.down('xs')]: {
-      margin: '0 auto'
-    }
-  }
-}))
+    marginTop: "10rem",
+    fontSize: "1.5rem",
+    [theme.breakpoints.down("xs")]: {
+      margin: "0 auto",
+    },
+  },
+}));
 
 const Footer = () => {
-  const classes = useStyles()
+  const classes = useStyles();
 
   return (
     <footer className={classes.footer}>
       <StaticImage
-        src='../assets/images/dark-bg.png'
+        src="../assets/images/dark-bg.png"
         className={classes.darkBg}
+        alt="background"
       />
       <Container>
         <Grid container>
           <Grid item xs={12} sm={6} md={4} className={classes.leftSide}>
-            <Typography variant='body1' className={classes.contactMessage}>
+            <Typography variant="body1" className={classes.contactMessage}>
               Book an Appointment With one of our Lawyers:
             </Typography>
-            <a href='tel:123-456-7890' className={classes.telephoneLink}>
+            <a href="tel:123-456-7890" className={classes.telephoneLink}>
               BOOK NOW
             </a>
             {/* <Typography variant='body1' className={classes.addressTitle}>
               Address
             </Typography> */}
-            <Typography variant='body1' className={classes.address}>
+            <Typography variant="body1" className={classes.address}>
               ROMANO LAW PLLC <br /> 55 BROAD STREET, 18TH FL. <br />
               NEW YORK, NY 10004
             </Typography>
             <div>
-              <Typography variant='body1' className={classes.socialIconsTitle}>
+              <Typography variant="body1" className={classes.socialIconsTitle}>
                 Get Social With Us
               </Typography>
               <div className={classes.socialIconsContainer}>
-                <a href='https://facebook.com'>
-                  <FaFacebook size='1.5em' title='Facebook icon link' />
+                <a href="https://facebook.com">
+                  <FaFacebook size="1.5em" title="Facebook icon link" />
                 </a>
 
-                <a href='https://twitter.com'>
-                  <FaTwitter size='1.5em' title='Twitter icon link' />
+                <a href="https://twitter.com">
+                  <FaTwitter size="1.5em" title="Twitter icon link" />
                 </a>
 
-                <a href='https://youtube.com'>
-                  <FaYoutube size='1.5em' title='Youtube icon link' />
+                <a href="https://youtube.com">
+                  <FaYoutube size="1.5em" title="Youtube icon link" />
                 </a>
 
-                <a href='https://instagram.com'>
-                  <FaInstagram size='1.5em' title='Instagram icon link' />
+                <a href="https://instagram.com">
+                  <FaInstagram size="1.5em" title="Instagram icon link" />
                 </a>
 
-                <a href='https://linkedin.com'>
-                  <FaLinkedin size='1.5em' title='Linkedin icon link' />
+                <a href="https://linkedin.com">
+                  <FaLinkedin size="1.5em" title="Linkedin icon link" />
                 </a>
               </div>
             </div>
           </Grid>
           <Hidden smDown>
             <Grid item xs={12} sm={6} md={4} className={classes.middleSide}>
-              <Typography variant='body1' className={classes.contactMessage}>
+              <Typography variant="body1" className={classes.contactMessage}>
                 Contact an Experienced Business Lawyer Now:
               </Typography>
-              <a href='tel:123-456-7890' className={classes.telephoneLink}>
+              <a href="tel:123-456-7890" className={classes.telephoneLink}>
                 (123) 456-7890
               </a>
-              <Typography variant='body1' className={classes.helpLink}>
-                <Link to='/contact'>How Can We Help?</Link>
+              <Typography variant="body1" className={classes.helpLink}>
+                <Link to="/contact">How Can We Help?</Link>
               </Typography>
-              <Typography variant='body1' className={classes.helpLink}>
-                <Link to='/about#reviews-section'>Client Reviews</Link>
+              <Typography variant="body1" className={classes.helpLink}>
+                <Link to="/about#reviews-section">Client Reviews</Link>
               </Typography>
             </Grid>
           </Hidden>
 
           <Grid item xs={12} sm={12} md={4} className={classes.rightSide}>
             <Hidden smDown>
-              <Typography variant='body2' className={classes.blurb}>
+              <Typography variant="body2" className={classes.blurb}>
                 OUR BUSINESS LAWYERS WORK WITH CLIENTS THROUGHOUT THE WORLD. IN
                 NEW YORK, WE REPRESENT PEOPLE AND BUSINESSES BASED IN MANHATTAN,
                 BROOKLYN, QUEENS, BRONX, STATEN ISLAND, LONG ISLAND, NASSAU,
@@ -194,14 +195,14 @@ const Footer = () => {
               </Typography>
             </Hidden>
 
-            <Typography variant='body1' className={classes.copyright}>
+            <Typography variant="body1" className={classes.copyright}>
               ©2003–2020 ROMANO LAW PLLC. <br /> ALL RIGHTS RESERVED. NYC
             </Typography>
           </Grid>
         </Grid>
       </Container>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

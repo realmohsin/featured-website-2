@@ -1,9 +1,8 @@
 import React from 'react'
 import clsx from 'clsx'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
+import { makeStyles } from '@material-ui/core/styles'
 
 import { Grid, Container } from '@material-ui/core'
-import Button from '../Button'
 
 const useStyles = makeStyles(theme => ({
   blogMediaSection: {
@@ -66,7 +65,6 @@ const useStyles = makeStyles(theme => ({
 }))
 
 const BlogMediaSection = props => {
-  const theme = useTheme()
   const classes = useStyles()
 
   return (
@@ -83,11 +81,11 @@ const BlogMediaSection = props => {
             >
               <div className={classes.videoContainer}>
                 <iframe
-                  title=''
+                  title='Domenic Romano on Fox Business News - Trump Orders US Companies Out of China - 8/23/2019'
                   src='https://www.youtube.com/embed/Bva8ARJrCog'
-                  frameborder='0'
+                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen
+                  allowFullScreen
                   className={classes.iframeYT}
                 />
               </div>
@@ -107,11 +105,11 @@ const BlogMediaSection = props => {
             >
               <div className={classes.videoContainer}>
                 <iframe
-                  title=''
+                  title='Domenic Romano on Fox Business News - Second Interview'
                   src='https://www.youtube.com/embed/oiUsGImX4uY'
-                  frameborder='0'
+                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen
+                  allowFullScreen
                   className={classes.iframeYT}
                 />
               </div>
@@ -131,11 +129,11 @@ const BlogMediaSection = props => {
             >
               <div className={classes.videoContainer}>
                 <iframe
-                  title=''
+                  title='Domenic Romano on Fox Business News - Third Interview'
                   src='https://www.youtube.com/embed/NJELMaBtUFY'
-                  frameborder='0'
+                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen
+                  allowFullScreen
                   className={classes.iframeYT}
                 />
               </div>
@@ -155,11 +153,11 @@ const BlogMediaSection = props => {
             >
               <div className={classes.videoContainer}>
                 <iframe
-                  title=''
+                  title='Domenic Romano on Fox Business News - Fourth Interview'
                   src='https://www.youtube.com/embed/W4HDYa9kk_g'
-                  frameborder='0'
+                  frameBorder='0'
                   allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-                  allowfullscreen
+                  allowFullScreen
                   className={classes.iframeYT}
                 />
               </div>

@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MediaSection Component renders media section with all content 1`] = `
+<section
+  class="makeStyles-blogMediaSection-1"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h2
+      class="makeStyles-title-3"
+    >
+      In the Media
+    </h2>
+    <div
+      class="makeStyles-mediaSection-5"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root makeStyles-mediaItem-8 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        >
+          <div
+            class="makeStyles-videoContainer-9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              class="makeStyles-iframeYT-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/Bva8ARJrCog"
+              title="Domenic Romano on Fox Business News - Trump Orders US Companies Out of China - 8/23/2019"
+            />
+          </div>
+          <p
+            class="makeStyles-itemDate-6"
+          >
+            <time>
+              11.07.19
+            </time>
+          </p>
+          <h5
+            class="makeStyles-mediaItemTitle-11"
+          >
+            DOMENIC ROMANO ON FOX BUSINESS NEWS – TRUMP ORDERS US COMPANIES OUT OF CHINA – 8/23/2019
+          </h5>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-mediaItem-8 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        >
+          <div
+            class="makeStyles-videoContainer-9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              class="makeStyles-iframeYT-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/oiUsGImX4uY"
+              title="Domenic Romano on Fox Business News - Second Interview"
+            />
+          </div>
+          <p
+            class="makeStyles-itemDate-6"
+          >
+            <time>
+              11.07.19
+            </time>
+          </p>
+          <h5
+            class="makeStyles-mediaItemTitle-11"
+          >
+            DOMENIC ROMANO ON FOX BUSINESS NEWS – TRUMP ORDERS US COMPANIES OUT OF CHINA – 8/23/2019
+          </h5>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-mediaItem-8 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        >
+          <div
+            class="makeStyles-videoContainer-9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              class="makeStyles-iframeYT-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/NJELMaBtUFY"
+              title="Domenic Romano on Fox Business News - Third Interview"
+            />
+          </div>
+          <p
+            class="makeStyles-itemDate-6"
+          >
+            <time>
+              11.07.19
+            </time>
+          </p>
+          <h5
+            class="makeStyles-mediaItemTitle-11"
+          >
+            DOMENIC ROMANO ON FOX BUSINESS NEWS – TRUMP ORDERS US COMPANIES OUT OF CHINA – 8/23/2019
+          </h5>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-mediaItem-8 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-6"
+        >
+          <div
+            class="makeStyles-videoContainer-9"
+          >
+            <iframe
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen=""
+              class="makeStyles-iframeYT-10"
+              frameborder="0"
+              src="https://www.youtube.com/embed/W4HDYa9kk_g"
+              title="Domenic Romano on Fox Business News - Fourth Interview"
+            />
+          </div>
+          <p
+            class="makeStyles-itemDate-6"
+          >
+            <time>
+              11.07.19
+            </time>
+          </p>
+          <h5
+            class="makeStyles-mediaItemTitle-11"
+          >
+            DOMENIC ROMANO ON FOX BUSINESS NEWS – TRUMP ORDERS US COMPANIES OUT OF CHINA – 8/23/2019
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;

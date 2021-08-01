@@ -1,10 +1,10 @@
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
 import { ThemeProvider } from '@material-ui/core/styles'
-import { createTheme } from '@material-ui/core/styles'
+import { createMuiTheme } from '@material-ui/core/styles'
 import Button from '../Button'
 
-const theme = createTheme({
+const theme = createMuiTheme({
   palette: {
     primary: { main: '#0E5C60', light: '#4A8B8F' },
     secondary: { main: '#CCAB63' }

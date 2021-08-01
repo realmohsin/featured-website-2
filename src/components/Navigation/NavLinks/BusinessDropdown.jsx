@@ -2,11 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import {
   makeStyles,
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Button
+  Grid
 } from '@material-ui/core'
 import clsx from 'clsx'
 

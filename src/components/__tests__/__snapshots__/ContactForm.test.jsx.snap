@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactForm Component renders contact form with all elements 1`] = `
+<section
+  class="makeStyles-contactSection-1"
+>
+  <img
+    alt="background"
+    class="makeStyles-lightBg-7"
+    src="../assets/images/light-bg.png"
+  />
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h2
+      class="makeStyles-contactTitle-2"
+    >
+      How Can We Help?
+    </h2>
+    <div
+      class="makeStyles-telephoneContainer-5"
+    >
+      Call us at
+      <a
+        class="makeStyles-telephoneLink-6"
+        href="tel:123-456-7890"
+      >
+        (123) 456-7890
+      </a>
+      or submit a message.
+    </div>
+    <form
+      class="makeStyles-form-3"
+      data-testid="contact-form"
+    >
+      <div
+        data-testid="input-firstName"
+      >
+        <input
+          name="firstName"
+          placeholder="First Name"
+          type="text"
+          value=""
+        />
+        <label>
+          First Name
+        </label>
+      </div>
+      <div
+        data-testid="input-lastName"
+      >
+        <input
+          name="lastName"
+          placeholder="Last Name"
+          type="text"
+          value=""
+        />
+        <label>
+          Last Name
+        </label>
+      </div>
+      <div
+        data-testid="input-telephone"
+      >
+        <input
+          name="telephone"
+          placeholder="Telephone"
+          type="tel"
+          value=""
+        />
+        <label>
+          Telephone
+        </label>
+      </div>
+      <div
+        data-testid="input-email"
+      >
+        <input
+          name="email"
+          placeholder="Email"
+          type="email"
+          value=""
+        />
+        <label>
+          Email
+        </label>
+      </div>
+      <div
+        data-testid="input-message"
+      >
+        <textarea
+          name="message"
+          placeholder="Message"
+          rows="5"
+        />
+        <label>
+          Message
+        </label>
+      </div>
+      <button
+        class="makeStyles-submitButton-4"
+      >
+        Submit
+      </button>
+    </form>
+  </div>
+</section>
+`;

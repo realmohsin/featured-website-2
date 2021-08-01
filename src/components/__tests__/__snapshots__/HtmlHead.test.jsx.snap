@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HtmlHead Component renders with both custom title and description 1`] = `
+<div
+  data-testid="helmet"
+>
+  <title>
+    About Us - Romano Law
+  </title>
+  <meta
+    content="Learn about Romano Law PLLC and our experienced legal team"
+    name="description"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&family=PT+Serif&family=Noto+Serif+JP&family=Cinzel&family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</div>
+`;
+
+exports[`HtmlHead Component renders with custom description 1`] = `
+<div
+  data-testid="helmet"
+>
+  <title>
+    Romano Law PLLC
+  </title>
+  <meta
+    content="Custom page description for SEO"
+    name="description"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&family=PT+Serif&family=Noto+Serif+JP&family=Cinzel&family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</div>
+`;
+
+exports[`HtmlHead Component renders with custom title 1`] = `
+<div
+  data-testid="helmet"
+>
+  <title>
+    Custom Page Title
+  </title>
+  <meta
+    content="Business, Entertainment & Dispute Resolution Law Firm"
+    name="description"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&family=PT+Serif&family=Noto+Serif+JP&family=Cinzel&family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</div>
+`;
+
+exports[`HtmlHead Component renders with default site metadata 1`] = `
+<div
+  data-testid="helmet"
+>
+  <title>
+    Romano Law PLLC
+  </title>
+  <meta
+    content="Business, Entertainment & Dispute Resolution Law Firm"
+    name="description"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Piazzolla&family=PT+Serif&family=Noto+Serif+JP&family=Cinzel&family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.gstatic.com"
+    rel="preconnect"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    rel="stylesheet"
+  />
+</div>
+`;

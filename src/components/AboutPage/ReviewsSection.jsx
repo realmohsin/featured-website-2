@@ -44,10 +44,10 @@ const ReviewsSection = () => {
         <h2 className={classes.teamSectionTitle}>Reviews</h2>
         <Grid container>
           {reviews.slice(0, 6).map(review => (
-            <Review review={review} />
+            <Review key={review.id} review={review} />
           ))}
           {moreOpen &&
-            reviews.slice(5, 11).map(review => <Review review={review} />)}
+            reviews.slice(5, 11).map(review => <Review key={review.id} review={review} />)}
         </Grid>
         <Button
           handleClick={toggleOpenMore}

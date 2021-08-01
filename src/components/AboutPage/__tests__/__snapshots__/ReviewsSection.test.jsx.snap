@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReviewsSection Component renders reviews section with initial reviews 1`] = `
+<section
+  class="makeStyles-teamSection-1"
+  id="reviews-section"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h2
+      class="makeStyles-teamSectionTitle-2"
+    >
+      Reviews
+    </h2>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        data-testid="review-1"
+      >
+        <span>
+          John Doe
+        </span>
+        <span>
+          Great service!
+        </span>
+      </div>
+      <div
+        data-testid="review-2"
+      >
+        <span>
+          Jane Smith
+        </span>
+        <span>
+          Excellent lawyers!
+        </span>
+      </div>
+      <div
+        data-testid="review-3"
+      >
+        <span>
+          Bob Johnson
+        </span>
+        <span>
+          Highly recommend!
+        </span>
+      </div>
+      <div
+        data-testid="review-4"
+      >
+        <span>
+          Alice Brown
+        </span>
+        <span>
+          Professional team!
+        </span>
+      </div>
+      <div
+        data-testid="review-5"
+      >
+        <span>
+          Charlie Wilson
+        </span>
+        <span>
+          Outstanding work!
+        </span>
+      </div>
+      <div
+        data-testid="review-6"
+      >
+        <span>
+          Diana Davis
+        </span>
+        <span>
+          Very satisfied!
+        </span>
+      </div>
+    </div>
+    <button
+      class="makeStyles-moreReviewsButton-3"
+    >
+      See More Reviews
+    </button>
+  </div>
+</section>
+`;

@@ -1,0 +1,169 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Review Component renders review with Facebook type 1`] = `
+<div
+  class="MuiGrid-root makeStyles-gridItem-1 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+>
+  <p
+    class="MuiTypography-root makeStyles-nameAndDate-2 MuiTypography-body1"
+  >
+    <span
+      class="makeStyles-nameSpan-3"
+    >
+      John Doe
+      ,
+    </span>
+      
+    <span
+      class="makeStyles-daysAgoSpan-4"
+    >
+      2 days ago
+    </span>
+  </p>
+  <div
+    class="makeStyles-starsContainer-5"
+  >
+    <div
+      class="makeStyles-star-6"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-6"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-6"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-6"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-6"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+  </div>
+  <div
+    class="makeStyles-iconAndTextGrid-7"
+  >
+    <div>
+      <div
+        class="makeStyles-platformIcon-9"
+        data-testid="facebook-icon"
+      >
+        FB
+      </div>
+    </div>
+    <p
+      class="MuiTypography-root makeStyles-text-8 MuiTypography-body2"
+    >
+      This is a great law firm with excellent service. They helped me with my business legal needs and I couldn't be happier with the results. The team is professional and knowledgeable.
+      ...
+        
+      <span
+        class="makeStyles-readMoreOrLess-10"
+        role="button"
+        tabindex="0"
+      >
+        Read 
+        More
+      </span>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Review Component renders review with Google type 1`] = `
+<div
+  class="MuiGrid-root makeStyles-gridItem-11 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4"
+>
+  <p
+    class="MuiTypography-root makeStyles-nameAndDate-12 MuiTypography-body1"
+  >
+    <span
+      class="makeStyles-nameSpan-13"
+    >
+      Jane Smith
+      ,
+    </span>
+      
+    <span
+      class="makeStyles-daysAgoSpan-14"
+    >
+      1 week ago
+    </span>
+  </p>
+  <div
+    class="makeStyles-starsContainer-15"
+  >
+    <div
+      class="makeStyles-star-16"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-16"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-16"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-16"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+    <div
+      class="makeStyles-star-16"
+      data-testid="star-icon"
+    >
+      ★
+    </div>
+  </div>
+  <div
+    class="makeStyles-iconAndTextGrid-17"
+  >
+    <div>
+      <div
+        class="makeStyles-platformIcon-19"
+        data-testid="google-icon"
+      >
+        G
+      </div>
+    </div>
+    <p
+      class="MuiTypography-root makeStyles-text-18 MuiTypography-body2"
+    >
+      Outstanding legal representation. Highly recommend their services for any business legal matters.
+      ...
+        
+      <span
+        class="makeStyles-readMoreOrLess-20"
+        role="button"
+        tabindex="0"
+      >
+        Read 
+        More
+      </span>
+    </p>
+  </div>
+</div>
+`;

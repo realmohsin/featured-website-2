@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IntroSection matches snapshot 1`] = `
+<div>
+  <section
+    class="makeStyles-aboutSection-25"
+  >
+    <img
+      alt="background"
+      class="makeStyles-lightBg-26"
+      data-testid="gatsby-image"
+      src="../../assets/images/light-bg.png"
+    />
+    <div
+      class="MuiContainer-root MuiContainer-maxWidthLg"
+    >
+      <h1
+        class="makeStyles-aboutTitle-28"
+      >
+        We are Romano Law
+      </h1>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root makeStyles-gridItem-30 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <h2
+            class="makeStyles-aboutSubTitle-29"
+          >
+            Innovative Legal Counsel for Business, Professionals & Creative People
+          </h2>
+          <img
+            alt="Business Law"
+            class="makeStyles-leftImg-32"
+            data-testid="gatsby-image"
+            src="../../assets/images/about-1.jpg"
+          />
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-gridItem-30 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6"
+        >
+          <img
+            alt="Business Law"
+            data-testid="gatsby-image"
+            src="../../assets/images/about-2.jpg"
+          />
+          <div
+            class="makeStyles-symbolDivider-27"
+            data-testid="divider"
+          />
+          <h5
+            class="makeStyles-contentTitle-31"
+          >
+            We Love What We Do
+          </h5>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            We are committed to providing practical legal services.
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            Whether you’re scaling a business, negotiating a contract or trying to resolve a dispute – your goals become our goals.
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            We pride ourselves in being approachable and getting things done. We avoid legalese. We’re proactive.
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            Focused on business, entertainment and dispute resolution, we represent entrepreneurs, stake-holders and creative professionals.
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            We focus on legal strategy, so you don’t have to.
+          </p>
+          <p
+            class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+          >
+            We’ve got this.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+`;

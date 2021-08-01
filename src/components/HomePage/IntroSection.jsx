@@ -118,128 +118,129 @@
 
 // export default IntroSection
 
-import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, Typography, Container } from '@material-ui/core'
+import React from "react";
+import { StaticImage } from "gatsby-plugin-image";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import useMediaQuery from "@material-ui/core/useMediaQuery";
+import { Grid, Typography, Container } from "@material-ui/core";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   aboutSection: {
-    padding: '3rem 0 12rem',
+    padding: "3rem 0 12rem",
     background: `radial-gradient(circle, rgba(239,249,249, 0.9) 0%, rgba(255, 255, 255, 0.1) 100%)`,
-    position: 'relative'
+    position: "relative",
   },
   lightBg: {
-    position: 'absolute !important',
+    position: "absolute !important",
     top: 0,
     bottom: 0,
     right: 0,
     left: 0,
     zIndex: -10,
-    '& img': {
-      objectFit: 'cover'
-    }
+    "& img": {
+      objectFit: "cover",
+    },
   },
   symbolDivider: {
-    width: '3.5rem',
-    height: '2px',
+    width: "3.5rem",
+    height: "2px",
     backgroundColor: theme.palette.secondary.main,
-    margin: '10rem 0 2rem',
-    [theme.breakpoints.down('xs')]: {
-      margin: '4rem 0 2rem'
-    }
+    margin: "10rem 0 2rem",
+    [theme.breakpoints.down("xs")]: {
+      margin: "4rem 0 2rem",
+    },
   },
   aboutTitle: {
     ...theme.custom.title2,
-    textAlign: 'left',
-    fontSize: '5.8rem',
-    paddingLeft: '5rem',
-    marginBottom: '4rem',
-    marginTop: '0rem',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '4.6rem'
+    textAlign: "left",
+    fontSize: "5.8rem",
+    paddingLeft: "5rem",
+    marginBottom: "4rem",
+    marginTop: "0rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "4.6rem",
     },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '3.4rem',
-      paddingLeft: '1.2rem',
-      marginBottom: '3rem'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "3.4rem",
+      paddingLeft: "1.2rem",
+      marginBottom: "3rem",
+    },
   },
   aboutSubTitle: {
     ...theme.custom.title3,
     // ...theme.custom.outlineTitle,
-    marginBottom: '3rem',
-    [theme.breakpoints.down('md')]: {
-      fontSize: '2.8rem'
+    marginBottom: "3rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2.8rem",
     },
-    [theme.breakpoints.down('xs')]: {
-      fontSize: '2.1rem'
-    }
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "2.1rem",
+    },
   },
   gridItem: {
-    padding: '0 5rem',
-    [theme.breakpoints.down('xs')]: {
-      padding: '0 1.2rem'
-    }
+    padding: "0 5rem",
+    [theme.breakpoints.down("xs")]: {
+      padding: "0 1.2rem",
+    },
   },
   contentTitle: {
     ...theme.custom.title4,
     // ...theme.custom.outlineTitle,
-    letterSpacing: '1px',
-    marginBottom: '3rem',
-    fontSize: '1.6rem'
+    letterSpacing: "1px",
+    marginBottom: "3rem",
+    fontSize: "1.6rem",
   },
   leftImg: {
-    [theme.breakpoints.down('xs')]: {
-      height: '40rem'
-    }
-  }
-}))
+    [theme.breakpoints.down("xs")]: {
+      height: "40rem",
+    },
+  },
+}));
 
-const AboutSection = props => {
-  const theme = useTheme()
-  const classes = useStyles()
+const AboutSection = (props) => {
+  const theme = useTheme();
+  const classes = useStyles();
 
-  const atXsDown = useMediaQuery(theme.breakpoints.down('xs')) // below 600
+  const atXsDown = useMediaQuery(theme.breakpoints.down("xs")); // below 600
 
   const RightSideImg = () => (
-    <StaticImage src='../../assets/images/about-2.jpg' alt='Business Law' />
-  )
+    <StaticImage src="../../assets/images/about-2.jpg" alt="Business Law" />
+  );
 
   const RightSideText = () => (
     <>
-      <div className={classes.symbolDivider} />
+      <div className={classes.symbolDivider} data-testid="divider" />
       <h5 className={classes.contentTitle}>We Love What We Do</h5>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         We are committed to providing practical legal services.
       </Typography>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         Whether you’re scaling a business, negotiating a contract or trying to
         resolve a dispute – your goals become our goals.
       </Typography>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         We pride ourselves in being approachable and getting things done. We
         avoid legalese. We’re proactive.
       </Typography>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         Focused on business, entertainment and dispute resolution, we represent
         entrepreneurs, stake-holders and creative professionals.
       </Typography>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         We focus on legal strategy, so you don’t have to.
       </Typography>
-      <Typography variant='body1' gutterBottom>
+      <Typography variant="body1" gutterBottom>
         We’ve got this.
       </Typography>
     </>
-  )
+  );
 
   return (
     <section className={classes.aboutSection}>
       <StaticImage
-        src='../../assets/images/light-bg.png'
+        src="../../assets/images/light-bg.png"
         className={classes.lightBg}
+        alt="background"
       />
       <Container>
         <h1 className={classes.aboutTitle}>We are Romano Law</h1>
@@ -250,8 +251,8 @@ const AboutSection = props => {
               People
             </h2>
             <StaticImage
-              src='../../assets/images/about-1.jpg'
-              alt='Business Law'
+              src="../../assets/images/about-1.jpg"
+              alt="Business Law"
               className={classes.leftImg}
             />
           </Grid>
@@ -271,7 +272,7 @@ const AboutSection = props => {
         </Grid>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default AboutSection
+export default AboutSection;

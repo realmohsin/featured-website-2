@@ -30,8 +30,23 @@ const useStyles = makeStyles(theme => ({
 
 const Toggle = ({ onToggle }) => {
   const classes = useStyles()
+  
+  const handleKeyDown = (e) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault()
+      onToggle()
+    }
+  }
+
   return (
-    <div className={classes.toggle} onClick={onToggle}>
+    <div 
+      className={classes.toggle} 
+      onClick={onToggle}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label="Toggle navigation menu"
+    >
       <div />
       <div />
       <div />

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import { Link } from 'gatsby'
 import { makeStyles } from '@material-ui/core/styles'
@@ -83,7 +83,7 @@ const useStyles = makeStyles(theme => ({
 const Navbar = ({ location }) => {
   const classes = useStyles()
 
-  const [pathname, setPathname] = useState(location.pathname)
+  const pathname = location.pathname
 
   return (
     <Container component='header' className={classes.navContainer}>

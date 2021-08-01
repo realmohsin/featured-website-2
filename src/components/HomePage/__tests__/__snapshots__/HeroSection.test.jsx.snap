@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeroSection matches snapshot 1`] = `
+<div>
+  <section
+    class="makeStyles-heroSection-4"
+    data-testid="hero-section"
+  >
+    <img
+      alt="Romana Law Lawyers"
+      class="makeStyles-heroImage-6"
+      data-testid="hero-image"
+      image="[object Object]"
+      layout="fullWidth"
+      src="test-hero-image.jpg"
+      style="object-position: top;"
+    />
+  </section>
+</div>
+`;

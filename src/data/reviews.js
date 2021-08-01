@@ -1,4 +1,4 @@
-export default [
+const reviews = [
   {
     id: 1,
     name: 'Carolyn H.',
@@ -96,3 +96,5 @@ export default [
       'The team at Romano Law are awesome. They provide practical, clear answers, options and expert direction while also being empathetic and professional about your personal situation. I felt heard and I felt supported by the entire team and their dedication to helping me resolve the situation was genuine and so very much appreciated. I trust that they had my welfare in mind before anything else. Highly recommend and plan to keep them as my legal team for any future needs for my small business and my family.'
   }
 ]
+
+export default reviews

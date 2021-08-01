@@ -1,0 +1,75 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CareersIntro Component renders careers intro section 1`] = `
+<section
+  class="makeStyles-careersIntroSection-1"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthMd"
+  >
+    <h1
+      class="MuiTypography-root makeStyles-careersTitle-2 MuiTypography-h1"
+    >
+      Careers
+    </h1>
+    <h2
+      class="MuiTypography-root makeStyles-joinSubtitle-3 MuiTypography-h2"
+    >
+      Join Our Team
+    </h2>
+    <div>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        We are Innovative Problem Solvers.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        Romano Law is a boutique law firm of talented and diverse people. Located in Downtown Manhattan, we are focused on Business Law, Entertainment, Employment and Dispute Resolution. Whatever “traditional” thoughts you might have about a law firm, that’s not us. We do things differently. Our team-oriented culture is professional, but modern – always working on growing and improving.
+         
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        We are all about getting things done and having fun along the way. We’re looking for intelligent, dynamic and thoughtful people.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 MuiTypography-gutterBottom"
+      >
+        The following positions are available:
+      </p>
+      <button
+        class="makeStyles-positionLink-4"
+        type="button"
+      >
+        Office Manager
+      </button>
+      <button
+        class="makeStyles-positionLink-4"
+        type="button"
+      >
+        Experienced Corporate Attorney
+      </button>
+      <button
+        class="makeStyles-positionLink-4"
+        type="button"
+      >
+        Client Development Director
+      </button>
+      <button
+        class="makeStyles-positionLink-4"
+        type="button"
+      >
+        Virtual Assistant
+      </button>
+      <button
+        class="makeStyles-positionLink-4"
+        type="button"
+      >
+        Experienced Business Litigation Attorney
+      </button>
+    </div>
+  </div>
+</section>
+`;

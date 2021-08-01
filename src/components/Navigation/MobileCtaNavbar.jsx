@@ -2,11 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import {
   makeStyles,
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Button
+  Grid
 } from '@material-ui/core'
 import Toggle from './Toggle'
 

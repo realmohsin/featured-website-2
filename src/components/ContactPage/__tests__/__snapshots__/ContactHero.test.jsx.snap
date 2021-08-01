@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContactHero matches snapshot 1`] = `
+<div>
+  <section
+    class="makeStyles-contactHero-3"
+  >
+    <img
+      alt="Romana Law Lawyers"
+      class="makeStyles-heroImage-4"
+      data-testid="contact-hero-image"
+      image="[object Object]"
+      layout="fullWidth"
+    />
+  </section>
+</div>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FocusSection Component renders focus section with all content 1`] = `
+<section
+  class="makeStyles-focusSection-1"
+>
+  <div
+    class="MuiContainer-root MuiContainer-maxWidthLg"
+  >
+    <h2
+      class="makeStyles-focusTitle-2"
+    >
+      Our Focus
+    </h2>
+    <div
+      class="MuiGrid-root makeStyles-row-3 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root makeStyles-rowContent-4 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
+      >
+        <h3
+          class="makeStyles-rowTitle-5"
+        >
+          Business Law
+        </h3>
+        <div
+          class="makeStyles-divider-6"
+        />
+        <p
+          class="MuiTypography-root makeStyles-rowParagraph-7 MuiTypography-body1"
+        >
+          From startups to larger corporations, we provide a range of legal services to help your business grow.
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-rowImgContainer-9 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7"
+      >
+        <img
+          alt="Business Law"
+          src="../../assets/images/focus-1.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-row-3 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root makeStyles-rowImgContainer-9 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7"
+      >
+        <img
+          alt="Entertainment Law"
+          src="../../assets/images/focus-2.jpg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiGrid-root makeStyles-row-3 MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root makeStyles-rowContent-4 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-5"
+      >
+        <h3
+          class="makeStyles-rowTitle-5"
+        >
+          Business Disputes
+        </h3>
+        <div
+          class="makeStyles-divider-6"
+        />
+        <p
+          class="MuiTypography-root makeStyles-rowParagraph-7 MuiTypography-body1"
+        >
+          Our experienced team of attorneys can help you navigate a disagreement, business divorce or recover a debt. We can assist with the litigation or defense of commercial matters in state, federal bankruptcy, federal district and federal appellate courts.
+        </p>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-rowImgContainer-9 MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-md-7"
+      >
+        <img
+          alt="Business Disputes"
+          src="../../assets/images/focus-3.jpg"
+        />
+      </div>
+    </div>
+  </div>
+</section>
+`;

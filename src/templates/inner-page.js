@@ -1,13 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-import { makeStyles, useTheme } from '@material-ui/core/styles'
-import useMediaQuery from '@material-ui/core/useMediaQuery'
-import { Grid, Typography, Container } from '@material-ui/core'
+import { makeStyles } from '@material-ui/core/styles'
+import { Container } from '@material-ui/core'
 import Layout from '../components/Layout'
 import ContactForm from '../components/ContactForm'
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer'
-import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types'
+import { BLOCKS, INLINES } from '@contentful/rich-text-types'
 
 const useStyles = makeStyles(theme => ({
   heroSection: {

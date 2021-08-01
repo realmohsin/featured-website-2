@@ -1,4 +1,4 @@
-export default [
+const teamMembers = [
   {
     id: 1,
     name: 'Domenic Romano',
@@ -60,3 +60,5 @@ export default [
     title: 'Associate Attorney'
   }
 ]
+
+export default teamMembers

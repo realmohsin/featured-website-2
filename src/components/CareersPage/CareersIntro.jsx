@@ -31,7 +31,17 @@ const useStyles = makeStyles(theme => ({
   positionLink: {
     marginBottom: '1.5rem',
     textDecoration: 'underline',
-    fontSize: '1.5rem'
+    fontSize: '1.5rem',
+    background: 'none',
+    border: 'none',
+    color: 'inherit',
+    cursor: 'pointer',
+    padding: 0,
+    display: 'block',
+    textAlign: 'left',
+    '&:hover': {
+      opacity: 0.8
+    }
   }
 }))
 
@@ -66,21 +76,21 @@ const CareersIntro = props => {
           <Typography variant='body1' gutterBottom>
             The following positions are available:
           </Typography>
-          <a href='#' className={classes.positionLink}>
+          <button type="button" className={classes.positionLink}>
             Office Manager
-          </a>
-          <a href='#' className={classes.positionLink}>
+          </button>
+          <button type="button" className={classes.positionLink}>
             Experienced Corporate Attorney
-          </a>
-          <a href='#' className={classes.positionLink}>
+          </button>
+          <button type="button" className={classes.positionLink}>
             Client Development Director
-          </a>
-          <a href='#' className={classes.positionLink}>
+          </button>
+          <button type="button" className={classes.positionLink}>
             Virtual Assistant
-          </a>
-          <a href='#' className={classes.positionLink}>
+          </button>
+          <button type="button" className={classes.positionLink}>
             Experienced Business Litigation Attorney
-          </a>
+          </button>
         </div>
       </Container>
     </section>
